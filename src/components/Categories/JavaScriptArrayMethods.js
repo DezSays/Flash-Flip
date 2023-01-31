@@ -1,8 +1,7 @@
 import React, { useState , useEffect } from 'react'
-import Col from 'react-bootstrap/Col'
-import Row from 'react-bootstrap/Row'
+import Stack from 'react-bootstrap/Stack';
 
-const data = require('../../data/data.json')
+
 
 const JavaScriptArrayMethods = () => {
 
@@ -29,9 +28,13 @@ const JavaScriptArrayMethods = () => {
 
     const getData = async() => {
 
+      const dataFetch = await fetch(`https://dezsays.github.io/API/data.json`)
+
+      const data = await dataFetch.json()
+
       let idx1 = getRandomInt(0,8);
   
-      const lvl1 = await data.javascript_array_methods.level[0].one[`${idx1}`]
+      const lvl1 = data.javascript_array_methods.level[0].one[`${idx1}`]
       const question1 = lvl1.question
       const answer1 = lvl1.answer
   
@@ -44,7 +47,7 @@ const JavaScriptArrayMethods = () => {
 
       let idx2 = getRandomInt(0,7);
   
-      const lvl2 = await data.javascript_array_methods.level[1].two[`${idx2}`]
+      const lvl2 = data.javascript_array_methods.level[1].two[`${idx2}`]
       const question2 = lvl2.question
       const answer2 = lvl2.answer
   
@@ -57,7 +60,7 @@ const JavaScriptArrayMethods = () => {
       
       let idx3 = getRandomInt(0,6);
   
-      const lvl3 = await data.javascript_array_methods.level[2].three[`${idx3}`]
+      const lvl3 = data.javascript_array_methods.level[2].three[`${idx3}`]
       const question3 = lvl3.question
       const answer3 = lvl3.answer
   
@@ -70,7 +73,7 @@ const JavaScriptArrayMethods = () => {
     
       let idx4 = getRandomInt(0,4);
   
-      const lvl4 = await data.javascript_array_methods.level[3].four[`${idx4}`]
+      const lvl4 = data.javascript_array_methods.level[3].four[`${idx4}`]
       const question4 = lvl4.question
       const answer4 = lvl4.answer
   
@@ -83,7 +86,7 @@ const JavaScriptArrayMethods = () => {
       
       let idx5 = getRandomInt(0,3);
   
-      const lvl5 = await data.javascript_array_methods.level[4].five[`${idx5}`]
+      const lvl5 = data.javascript_array_methods.level[4].five[`${idx5}`]
       const question5 = lvl5.question
       const answer5 = lvl5.answer
   
@@ -100,14 +103,14 @@ const JavaScriptArrayMethods = () => {
     }, []) 
   return (
     <>
-    <Row>
-        <Col>JavaScript Array Methods</Col>
-        <Col>{q1}</Col>
-        <Col>{q2}</Col>
-        <Col>{q3}</Col>
-        <Col>{q4}</Col>
-        <Col>{q5}</Col>
-    </Row>
+      <Stack gap={2}>
+          <div className="bg-light border">JavaScript Array Methods</div>
+          <div className="bg-light border">{q1}</div>
+          <div className="bg-light border">{q2}</div>
+          <div className="bg-light border">{q3}</div>
+          <div className="bg-light border">{q4}</div>
+          <div className="bg-light border">{q5}</div>
+      </Stack>
     </>
   )
 }

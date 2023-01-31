@@ -2,15 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './components/App';
-// import JavaScriptArrayMethods from './components/Categories/JavaScriptArrayMethods';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+// TODO Need to host custom api before deployment
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
-    {/* <JavaScriptArrayMethods /> */}
   </React.StrictMode>
 );
 
