@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
-import JavaScript_Array_Methods from "./Categories/JavaScriptArrayMethods";
+import JavaScriptArrayMethods from "./Categories/JavaScriptArrayMethods";
 
 
 const App = () => {
@@ -17,7 +17,8 @@ const App = () => {
   const [category5, setCategory5] = useState("")
   const [category6, setCategory6] = useState("")
   const [displayState, setDisplayState] = useState(0)
-  
+  const [isDisabled, setIsDisabled] = useState(false)
+  const [isHidden, setIsHidden] = useState(true)
   
   let catArr = []
 
@@ -43,12 +44,16 @@ const App = () => {
       setCategory4(catArr[3])
       setCategory5(catArr[4])
       setCategory6(catArr[5])
-      setDisplayState(1)
+      setIsDisabled(true)
+      setIsHidden(false)
     }
   }
 
+  const handleStartGame = () => {
+      setDisplayState(1)
+  }
 
-
+  let finalSelections = [c1,c2,c3,c4,c5,c6]
 if(displayState === 0){
 
   return (
@@ -56,50 +61,51 @@ if(displayState === 0){
       <Form>
           <div key="checkbox" className="mb-3">
               <Form.Check type="checkbox">
-                <Form.Check.Input className="category-option" type="checkbox" isValid onClick={handleSelect} value="css"/>
+                <Form.Check.Input className="category-option" type="checkbox" isValid disabled={isDisabled} onClick={handleSelect} value="css"/>
                 <Form.Check.Label className="form-check-label">CSS</Form.Check.Label>
               </Form.Check>
               <Form.Check type="checkbox">
-                <Form.Check.Input className="category-option" type="checkbox"  isValid onClick={handleSelect} value="javascript"/>
+                <Form.Check.Input className="category-option" type="checkbox"  isValid disabled={isDisabled} onClick={handleSelect} value="javascript"/>
                 <Form.Check.Label className="form-check-label">JavaScript</Form.Check.Label>
               </Form.Check>
               <Form.Check type="checkbox">
-                <Form.Check.Input className="category-option" type="checkbox"  isValid onClick={handleSelect} value="javascript_array_methods"/>
+                <Form.Check.Input className="category-option" type="checkbox"  isValid disabled={isDisabled} onClick={handleSelect} value="javascript_array_methods"/>
                 <Form.Check.Label className="form-check-label">JavaScript Array Methods</Form.Check.Label>
               </Form.Check>
               <Form.Check type="checkbox">
-                <Form.Check.Input className="category-option" type="checkbox"  isValid onClick={handleSelect} value="Test"/>
+                <Form.Check.Input className="category-option" type="checkbox"  isValid disabled={isDisabled} onClick={handleSelect} value="Test"/>
                 <Form.Check.Label className="form-check-label">c</Form.Check.Label>
               </Form.Check>
               <Form.Check type="checkbox">
-                <Form.Check.Input className="category-option" type="checkbox"  isValid onClick={handleSelect} value="cat 5 test"/>
+                <Form.Check.Input className="category-option" type="checkbox"  isValid disabled={isDisabled} onClick={handleSelect} value="cat 5 test"/>
                 <Form.Check.Label className="form-check-label">c</Form.Check.Label>
               </Form.Check>
               <Form.Check type="checkbox">
-                <Form.Check.Input className="category-option" type="checkbox"  isValid onClick={handleSelect} value="cat 4 test"/>
+                <Form.Check.Input className="category-option" type="checkbox"  isValid disabled={isDisabled} onClick={handleSelect} value="cat 4 test"/>
                 <Form.Check.Label className="form-check-label">c</Form.Check.Label>
               </Form.Check>
               <Form.Check type="checkbox">
-                <Form.Check.Input className="category-option" type="checkbox"  isValid onClick={handleSelect} value="cat 3 test"/>
+                <Form.Check.Input className="category-option" type="checkbox"  isValid disabled={isDisabled} onClick={handleSelect} value="cat 3 test"/>
                 <Form.Check.Label className="form-check-label">c</Form.Check.Label>
               </Form.Check>
           </div>
+          <button hidden={isHidden} onClick={handleStartGame}>start game</button>
       </Form>
       
 
     </>
   );
 }
-if(displayState === 1) {
+if(displayState === 1 && finalSelections.includes(jam)) {
     return(
       <Container>
         <Row>
-          <Col><JavaScript_Array_Methods /></Col>
-          <Col><JavaScript_Array_Methods /></Col>
-          <Col><JavaScript_Array_Methods /></Col>
-          <Col><JavaScript_Array_Methods /></Col>
-          <Col><JavaScript_Array_Methods /></Col>
-          <Col><JavaScript_Array_Methods /></Col>
+          <Col><JavaScriptArrayMethods /></Col>
+          <Col><JavaScriptArrayMethods /></Col>
+          <Col><JavaScriptArrayMethods /></Col>
+          <Col><JavaScriptArrayMethods /></Col>
+          <Col><JavaScriptArrayMethods /></Col>
+          <Col><JavaScriptArrayMethods /></Col>
         </Row>
         
 
