@@ -8,8 +8,6 @@ import JavaScriptArrayMethods from "./Categories/JavaScriptArrayMethods";
 
 const App = () => {
 
-
-
   const [category1, setCategory1] = useState("")
   const [category2, setCategory2] = useState("")
   const [category3, setCategory3] = useState("")
@@ -19,6 +17,8 @@ const App = () => {
   const [displayState, setDisplayState] = useState(0)
   const [isDisabled, setIsDisabled] = useState(false)
   const [isHidden, setIsHidden] = useState(true)
+
+  // let choices = ['css', 'javascript_array_methods', 'html', 'react', 'redux', 'javascript_error_types', 'status_codes']
   
   let catArr = []
 
@@ -54,6 +54,7 @@ const App = () => {
   }
 
   let finalSelections = [c1,c2,c3,c4,c5,c6]
+
 if(displayState === 0){
 
   return (
@@ -100,12 +101,12 @@ if(displayState === 1 && finalSelections.includes(jam)) {
     return(
       <Container>
         <Row>
-          <Col><JavaScriptArrayMethods /></Col>
-          <Col><JavaScriptArrayMethods /></Col>
-          <Col><JavaScriptArrayMethods /></Col>
-          <Col><JavaScriptArrayMethods /></Col>
-          <Col><JavaScriptArrayMethods /></Col>
-          <Col><JavaScriptArrayMethods /></Col>
+          <Col id="component-col-one"><JavaScriptArrayMethods /></Col>
+          <Col id="component-col-two"><JavaScriptArrayMethods /></Col>
+          <Col id="component-col-three"><JavaScriptArrayMethods /></Col>
+          <Col id="component-col-four"><JavaScriptArrayMethods /></Col>
+          <Col id="component-col-five"><JavaScriptArrayMethods /></Col>
+          <Col id="component-col-six"><JavaScriptArrayMethods /></Col>
         </Row>
         
 
@@ -115,7 +116,7 @@ if(displayState === 1 && finalSelections.includes(jam)) {
 }
 else{
   return(
-    <h1>3</h1>
+    <h1>Oops, our bad. You have found our secret error page you little hacker. </h1>
   )
 }
 };
