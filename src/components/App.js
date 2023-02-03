@@ -4,6 +4,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import JavaScriptArrayMethods from "./Categories/JavaScriptArrayMethods";
+import HTTPRequestMethods from "./Categories/HTTPRequestMethods";
 
 
 const App = () => {
@@ -30,6 +31,14 @@ const App = () => {
   let c6 = category6
 
   let jam = 'javascript_array_methods'
+  let hrm = 'http_request_methods'
+
+  if(c1 === jam){
+    c1 = <JavaScriptArrayMethods />
+  }
+  if(c1 === hrm){
+    c1 = <HTTPRequestMethods />
+  }
 
   const handleSelect = (e) => {
     let val = e.target.value
@@ -53,7 +62,10 @@ const App = () => {
       setDisplayState(1)
   }
 
-  let finalSelections = [c1,c2,c3,c4,c5,c6]
+  // let finalSelections = [c1,c2,c3,c4,c5,c6]
+  // finalSelections.map(choice => {
+    
+  // })
 
 if(displayState === 0){
 
@@ -89,6 +101,10 @@ if(displayState === 0){
                 <Form.Check.Input className="category-option" type="checkbox"  isValid disabled={isDisabled} onClick={handleSelect} value="cat 3 test"/>
                 <Form.Check.Label className="form-check-label">c</Form.Check.Label>
               </Form.Check>
+              <Form.Check type="checkbox">
+                <Form.Check.Input className="category-option" type="checkbox"  isValid disabled={isDisabled} onClick={handleSelect} value="http_request_methods"/>
+                <Form.Check.Label className="form-check-label">HTTP Request Methods</Form.Check.Label>
+              </Form.Check>
           </div>
           <button hidden={isHidden} onClick={handleStartGame}>start game</button>
       </Form>
@@ -97,16 +113,16 @@ if(displayState === 0){
     </>
   );
 }
-if(displayState === 1 && finalSelections.includes(jam)) {
+if(displayState === 1) {
     return(
       <Container>
         <Row>
-          <Col id="component-col-one"><JavaScriptArrayMethods /></Col>
-          <Col id="component-col-two"><JavaScriptArrayMethods /></Col>
-          <Col id="component-col-three"><JavaScriptArrayMethods /></Col>
-          <Col id="component-col-four"><JavaScriptArrayMethods /></Col>
-          <Col id="component-col-five"><JavaScriptArrayMethods /></Col>
-          <Col id="component-col-six"><JavaScriptArrayMethods /></Col>
+          <Col id="component-col-one">{c1}</Col>
+          <Col id="component-col-two">{c2}</Col>
+          <Col id="component-col-three">{c3}</Col>
+          <Col id="component-col-four">{c4}</Col>
+          <Col id="component-col-five">{c5}</Col>
+          <Col id="component-col-six">{c6}</Col>
         </Row>
         
 
@@ -116,7 +132,9 @@ if(displayState === 1 && finalSelections.includes(jam)) {
 }
 else{
   return(
-    <h1>Oops, our bad. You have found our secret error page you little hacker. </h1>
+    <h1>Oops, our bad. You have found our secret error page you little hacker. 
+      {jam}
+    </h1>
   )
 }
 };
