@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Stack from "react-bootstrap/Stack";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
 
 const HTTPRequestMethods = () => {
   function getRandomInt(min, max) {
@@ -36,6 +38,10 @@ const HTTPRequestMethods = () => {
   const [clicked3, setClicked3] = useState("");
   const [clicked4, setClicked4] = useState("");
   const [clicked5, setClicked5] = useState("");
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   const getData = async () => {
     const dataFetch = await fetch(`https://dezsays.github.io/API/data.json`);
@@ -108,103 +114,124 @@ const HTTPRequestMethods = () => {
     return true;
   }
 
+  
   const handleClick1 = (e) => {
     setDisplay(1);
     setIsDisabled1(true);
     setClicked1("clicked-one");
+    handleShow();
   };
 
   const handleClick2 = (e) => {
     setDisplay(2);
     setIsDisabled2(true);
     setClicked2("clicked-two");
+    handleShow();
   };
 
   const handleClick3 = (e) => {
     setDisplay(3);
     setIsDisabled3(true);
     setClicked3("clicked-three");
+    handleShow();
   };
 
   const handleClick4 = (e) => {
     setDisplay(4);
     setIsDisabled4(true);
     setClicked4("clicked-four");
+    handleShow();
   };
 
   const handleClick5 = (e) => {
     setDisplay(5);
     setIsDisabled5(true);
     setClicked5("clicked-five");
+    handleShow();
   };
-
   const handleClickQ = (e) => {
     if (clicked1 === "clicked-one") {
+      handleClose();
       if (userInput.toLowerCase() === a1.toLowerCase()) {
         console.log("correct answer");
         setDisplay(0);
         setColor1("#228B22");
         setClicked1("complete-click");
+          
       } else {
         console.log(`incorrect, the correct answer is ${a1}`);
         setDisplay(0);
         setColor1("#9B1003");
         setClicked1("complete-click");
+          
       }
     }
     if (clicked2 === "clicked-two") {
+      handleClose();
       if (userInput.toLowerCase() === a2.toLowerCase()) {
         console.log("correct answer");
         setDisplay(0);
         setColor2("#228B22");
         setClicked2("complete-click");
+          
       } else {
         console.log(`incorrect, the correct answer is ${a2}`);
         setDisplay(0);
         setColor2("#9B1003");
         setClicked2("complete-click");
+          
       }
     }
     if (clicked3 === "clicked-three") {
+      handleClose();
       if (userInput.toLowerCase() === a3.toLowerCase()) {
         console.log("correct answer");
         setDisplay(0);
         setColor3("#228B22");
         setClicked3("complete-click");
+          
       } else {
         console.log(`incorrect, the correct answer is ${a3}`);
         setDisplay(0);
         setColor3("#9B1003");
         setClicked3("complete-click");
+          
       }
     }
     if (clicked4 === "clicked-four") {
+      handleClose();
       if (userInput.toLowerCase() === a4.toLowerCase()) {
         console.log("correct answer");
         setDisplay(0);
         setColor4("#228B22");
         setClicked4("complete-click");
+          
       } else {
         console.log(`incorrect, the correct answer is ${a4}`);
         setDisplay(0);
         setColor4("#9B1003");
         setClicked4("complete-click");
+          
       }
     }
     if (clicked5 === "clicked-five") {
+      handleClose();
       if (userInput.toLowerCase() === a5.toLowerCase()) {
         console.log("correct answer");
         setDisplay(0);
         setColor5("#228B22");
         setClicked5("complete-click");
+          
       } else {
         console.log(`incorrect, the correct answer is ${a5}`);
         setDisplay(0);
         setColor5("#9B1003");
         setClicked5("complete-click");
+          
       }
     }
   };
+
 
   if (display === 0) {
     return (
@@ -212,7 +239,6 @@ const HTTPRequestMethods = () => {
         <Stack gap={2}>
           <button>HTTP Request Methods</button>
           <button
-            id="q1-button"
             onClick={handleClick1}
             disabled={isDisabled1}
             style={{ backgroundColor: `${color1}` }}
@@ -259,100 +285,180 @@ const HTTPRequestMethods = () => {
   if (display === 1) {
     return (
       <>
-        <div className="bg-light border" >{q1}</div>
-        <div id="search-bar">
-          <input
-            type="text"
-            placeholder="Answer"
-            value={userInput}
-            id="user-input"
-            onChange={(e) => setUserInput(e.target.value)}
-            onKeyUp={searchKeyPress}
-          />
-          <button type="submit" id="user-input-submit" onClick={handleClickQ}>
-            Submit
-          </button>
-        </div>
+        <Modal
+          show={show}
+          onHide={handleClose}
+          backdrop="static"
+          keyboard={false}
+        >
+          <Modal.Header closeButton>
+            <Modal.Title>{q1}</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <input
+              type="text"
+              placeholder="Answer"
+              value={userInput}
+              id="user-input"
+              onChange={(e) => setUserInput(e.target.value)}
+              onKeyUp={searchKeyPress}
+            />
+          </Modal.Body>
+          <Modal.Footer>
+            <Button
+              variant="secondary"
+              type="submit"
+              id="user-input-submit"
+              onClick={handleClickQ}
+            >
+              Submit
+            </Button>
+          </Modal.Footer>
+        </Modal>
       </>
     );
   }
   if (display === 2) {
     return (
       <>
-        <div className="bg-light border">{q2}</div>
-        <div id="search-bar">
-          <input
-            type="text"
-            placeholder="Answer"
-            value={userInput}
-            id="user-input"
-            onChange={(e) => setUserInput(e.target.value)}
-            onKeyUp={searchKeyPress}
-          />
-          <button type="submit" id="user-input-submit" onClick={handleClickQ}>
-            Submit
-          </button>
-        </div>
+        <Modal
+          show={show}
+          onHide={handleClose}
+          backdrop="static"
+          keyboard={false}
+        >
+          <Modal.Header closeButton>
+            <Modal.Title>{q2}</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <input
+              type="text"
+              placeholder="Answer"
+              value={userInput}
+              id="user-input"
+              onChange={(e) => setUserInput(e.target.value)}
+              onKeyUp={searchKeyPress}
+            />
+          </Modal.Body>
+          <Modal.Footer>
+            <Button
+              variant="secondary"
+              type="submit"
+              id="user-input-submit"
+              onClick={handleClickQ}
+            >
+              Submit
+            </Button>
+          </Modal.Footer>
+        </Modal>
       </>
     );
   }
   if (display === 3) {
     return (
       <>
-        <div className="bg-light border">{q3}</div>
-        <div id="search-bar">
-          <input
-            type="text"
-            placeholder="Answer"
-            value={userInput}
-            id="user-input"
-            onChange={(e) => setUserInput(e.target.value)}
-            onKeyUp={searchKeyPress}
-          />
-          <button type="submit" id="user-input-submit" onClick={handleClickQ}>
-            Submit
-          </button>
-        </div>
+        <Modal
+          show={show}
+          onHide={handleClose}
+          backdrop="static"
+          keyboard={false}
+        >
+          <Modal.Header closeButton>
+            <Modal.Title>{q3}</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <input
+              type="text"
+              placeholder="Answer"
+              value={userInput}
+              id="user-input"
+              onChange={(e) => setUserInput(e.target.value)}
+              onKeyUp={searchKeyPress}
+            />
+          </Modal.Body>
+          <Modal.Footer>
+            <Button
+              variant="secondary"
+              type="submit"
+              id="user-input-submit"
+              onClick={handleClickQ}
+            >
+              Submit
+            </Button>
+          </Modal.Footer>
+        </Modal>
       </>
     );
   }
   if (display === 4) {
     return (
       <>
-        <div className="bg-light border">{q4}</div>
-        <div id="search-bar">
-          <input
-            type="text"
-            placeholder="Answer"
-            value={userInput}
-            id="user-input"
-            onChange={(e) => setUserInput(e.target.value)}
-            onKeyUp={searchKeyPress}
-          />
-          <button type="submit" id="user-input-submit" onClick={handleClickQ}>
-            Submit
-          </button>
-        </div>
+        <Modal
+          show={show}
+          onHide={handleClose}
+          backdrop="static"
+          keyboard={false}
+        >
+          <Modal.Header closeButton>
+            <Modal.Title>{q4}</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <input
+              type="text"
+              placeholder="Answer"
+              value={userInput}
+              id="user-input"
+              onChange={(e) => setUserInput(e.target.value)}
+              onKeyUp={searchKeyPress}
+            />
+          </Modal.Body>
+          <Modal.Footer>
+            <Button
+              variant="secondary"
+              type="submit"
+              id="user-input-submit"
+              onClick={handleClickQ}
+            >
+              Submit
+            </Button>
+          </Modal.Footer>
+        </Modal>
       </>
     );
   }
   if (display === 5) {
     return (
       <>
-        <div className="bg-light border">{q5}</div>
-        <div id="search-bar">
-          <input
-            type="text"
-            placeholder="Answer"
-            value={userInput}
-            id="user-input"
-            onChange={(e) => setUserInput(e.target.value)}
-            onKeyUp={searchKeyPress}
-          />
-          <button type="submit" id="user-input-submit" onClick={handleClickQ}>
-            Submit
-          </button>
-        </div>
+        <Modal
+          show={show}
+          onHide={handleClose}
+          backdrop="static"
+          keyboard={false}
+        >
+          <Modal.Header closeButton>
+            <Modal.Title>{q5}</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <input
+              type="text"
+              placeholder="Answer"
+              value={userInput}
+              id="user-input"
+              onChange={(e) => setUserInput(e.target.value)}
+              onKeyUp={searchKeyPress}
+            />
+          </Modal.Body>
+          <Modal.Footer>
+            <Button
+              variant="secondary"
+              type="submit"
+              id="user-input-submit"
+              onClick={handleClickQ}
+            >
+              Submit
+            </Button>
+          </Modal.Footer>
+        </Modal>
       </>
     );
   }

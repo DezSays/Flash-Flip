@@ -3,7 +3,7 @@ import Stack from "react-bootstrap/Stack";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 
-const JavaScriptArrayMethods = () => {
+const JavaScriptMathMethods = () => {
   function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -49,9 +49,9 @@ const JavaScriptArrayMethods = () => {
 
     const data = await dataFetch.json();
 
-    let idx1 = getRandomInt(0, 8);
+    let idx1 = getRandomInt(0, 2);
 
-    const lvl1 = data.javascript_array_methods.level[0].one[`${idx1}`];
+    const lvl1 = data.javascript_math_methods.level[0].one[`${idx1}`];
     const question1 = lvl1.question;
     const answer1 = lvl1.answer;
 
@@ -60,9 +60,9 @@ const JavaScriptArrayMethods = () => {
 
     // ***********************************************
 
-    let idx2 = getRandomInt(0, 7);
+    let idx2 = getRandomInt(0, 3);
 
-    const lvl2 = data.javascript_array_methods.level[1].two[`${idx2}`];
+    const lvl2 = data.javascript_math_methods.level[1].two[`${idx2}`];
     const question2 = lvl2.question;
     const answer2 = lvl2.answer;
 
@@ -71,9 +71,9 @@ const JavaScriptArrayMethods = () => {
 
     // ***********************************************
 
-    let idx3 = getRandomInt(0, 6);
+    let idx3 = getRandomInt(0, 3);
 
-    const lvl3 = data.javascript_array_methods.level[2].three[`${idx3}`];
+    const lvl3 = data.javascript_math_methods.level[2].three[`${idx3}`];
     const question3 = lvl3.question;
     const answer3 = lvl3.answer;
 
@@ -84,7 +84,7 @@ const JavaScriptArrayMethods = () => {
 
     let idx4 = getRandomInt(0, 4);
 
-    const lvl4 = data.javascript_array_methods.level[3].four[`${idx4}`];
+    const lvl4 = data.javascript_math_methods.level[3].four[`${idx4}`];
     const question4 = lvl4.question;
     const answer4 = lvl4.answer;
 
@@ -93,9 +93,9 @@ const JavaScriptArrayMethods = () => {
 
     // ***********************************************
 
-    let idx5 = getRandomInt(0, 3);
+    let idx5 = getRandomInt(0, 2);
 
-    const lvl5 = data.javascript_array_methods.level[4].five[`${idx5}`];
+    const lvl5 = data.javascript_math_methods.level[4].five[`${idx5}`];
     const question5 = lvl5.question;
     const answer5 = lvl5.answer;
 
@@ -155,6 +155,7 @@ const JavaScriptArrayMethods = () => {
   };
 
   const handleClickQ = (e) => {
+    
     if (clicked1 === "clicked-one") {
       handleClose();
       if (userInput.toLowerCase() === a1.toLowerCase()) {
@@ -162,13 +163,14 @@ const JavaScriptArrayMethods = () => {
         setDisplay(0);
         setColor1("#228B22");
         setClicked1("complete-click");
-          
+        
+        
       } else {
         console.log(`incorrect, the correct answer is ${a1}`);
         setDisplay(0);
         setColor1("#9B1003");
         setClicked1("complete-click");
-          
+        
       }
     }
     if (clicked2 === "clicked-two") {
@@ -178,13 +180,13 @@ const JavaScriptArrayMethods = () => {
         setDisplay(0);
         setColor2("#228B22");
         setClicked2("complete-click");
-          
+        
       } else {
         console.log(`incorrect, the correct answer is ${a2}`);
         setDisplay(0);
         setColor2("#9B1003");
         setClicked2("complete-click");
-          
+        
       }
     }
     if (clicked3 === "clicked-three") {
@@ -194,13 +196,13 @@ const JavaScriptArrayMethods = () => {
         setDisplay(0);
         setColor3("#228B22");
         setClicked3("complete-click");
-          
+        
       } else {
         console.log(`incorrect, the correct answer is ${a3}`);
         setDisplay(0);
         setColor3("#9B1003");
         setClicked3("complete-click");
-          
+        
       }
     }
     if (clicked4 === "clicked-four") {
@@ -210,13 +212,13 @@ const JavaScriptArrayMethods = () => {
         setDisplay(0);
         setColor4("#228B22");
         setClicked4("complete-click");
-          
+        
       } else {
         console.log(`incorrect, the correct answer is ${a4}`);
         setDisplay(0);
         setColor4("#9B1003");
         setClicked4("complete-click");
-          
+        
       }
     }
     if (clicked5 === "clicked-five") {
@@ -226,13 +228,13 @@ const JavaScriptArrayMethods = () => {
         setDisplay(0);
         setColor5("#228B22");
         setClicked5("complete-click");
-          
+        
       } else {
         console.log(`incorrect, the correct answer is ${a5}`);
         setDisplay(0);
         setColor5("#9B1003");
         setClicked5("complete-click");
-          
+        
       }
     }
   };
@@ -241,7 +243,7 @@ const JavaScriptArrayMethods = () => {
     return (
       <>
         <Stack gap={2}>
-          <button>JavaScript Array Methods</button>
+          <button>JavaScript Math Methods</button>
           <button
             onClick={handleClick1}
             disabled={isDisabled1}
@@ -295,7 +297,7 @@ const JavaScriptArrayMethods = () => {
           backdrop="static"
           keyboard={false}
         >
-          <Modal.Header closeButton>
+          <Modal.Header>
             <Modal.Title>{q1}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
@@ -314,6 +316,7 @@ const JavaScriptArrayMethods = () => {
               type="submit"
               id="user-input-submit"
               onClick={handleClickQ}
+              
             >
               Submit
             </Button>
@@ -331,7 +334,7 @@ const JavaScriptArrayMethods = () => {
           backdrop="static"
           keyboard={false}
         >
-          <Modal.Header closeButton>
+          <Modal.Header>
             <Modal.Title>{q2}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
@@ -350,6 +353,7 @@ const JavaScriptArrayMethods = () => {
               type="submit"
               id="user-input-submit"
               onClick={handleClickQ}
+              
             >
               Submit
             </Button>
@@ -367,7 +371,7 @@ const JavaScriptArrayMethods = () => {
           backdrop="static"
           keyboard={false}
         >
-          <Modal.Header closeButton>
+          <Modal.Header>
             <Modal.Title>{q3}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
@@ -386,6 +390,7 @@ const JavaScriptArrayMethods = () => {
               type="submit"
               id="user-input-submit"
               onClick={handleClickQ}
+              
             >
               Submit
             </Button>
@@ -403,7 +408,7 @@ const JavaScriptArrayMethods = () => {
           backdrop="static"
           keyboard={false}
         >
-          <Modal.Header closeButton>
+          <Modal.Header>
             <Modal.Title>{q4}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
@@ -422,6 +427,7 @@ const JavaScriptArrayMethods = () => {
               type="submit"
               id="user-input-submit"
               onClick={handleClickQ}
+              
             >
               Submit
             </Button>
@@ -439,7 +445,7 @@ const JavaScriptArrayMethods = () => {
           backdrop="static"
           keyboard={false}
         >
-          <Modal.Header closeButton>
+          <Modal.Header>
             <Modal.Title>{q5}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
@@ -458,6 +464,7 @@ const JavaScriptArrayMethods = () => {
               type="submit"
               id="user-input-submit"
               onClick={handleClickQ}
+              
             >
               Submit
             </Button>
@@ -468,4 +475,4 @@ const JavaScriptArrayMethods = () => {
   }
 };
 
-export default JavaScriptArrayMethods;
+export default JavaScriptMathMethods;
