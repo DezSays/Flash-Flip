@@ -12,7 +12,6 @@ const JavaScriptTypes = () => {
   }
 
   const [q1, setQ1] = useState("");
-  const [userInput, setUserInput] = useState("");
   const [a1, setA1] = useState("");
   const [q2, setQ2] = useState("");
   const [a2, setA2] = useState("");
@@ -38,6 +37,11 @@ const JavaScriptTypes = () => {
   const [clicked3, setClicked3] = useState("");
   const [clicked4, setClicked4] = useState("");
   const [clicked5, setClicked5] = useState("");
+  const [userInput1, setUserInput1] = useState("");
+  const [userInput2, setUserInput2] = useState("");
+  const [userInput3, setUserInput3] = useState("");
+  const [userInput4, setUserInput4] = useState("");
+  const [userInput5, setUserInput5] = useState("");
 
   const [show, setShow] = useState(false);
 
@@ -151,7 +155,7 @@ const JavaScriptTypes = () => {
   const handleClickQ = (e) => {
     if (clicked1 === "clicked-one") {
       handleClose();
-      if (userInput.toLowerCase() === a1.toLowerCase()) {
+      if (userInput1.toLowerCase() === a1.toLowerCase()) {
         console.log("correct answer");
         setDisplay(0);
         setColor1("#228B22");
@@ -167,7 +171,7 @@ const JavaScriptTypes = () => {
     }
     if (clicked2 === "clicked-two") {
       handleClose();
-      if (userInput.toLowerCase() === a2.toLowerCase()) {
+      if (userInput2.toLowerCase() === a2.toLowerCase()) {
         console.log("correct answer");
         setDisplay(0);
         setColor2("#228B22");
@@ -183,7 +187,7 @@ const JavaScriptTypes = () => {
     }
     if (clicked3 === "clicked-three") {
       handleClose();
-      if (userInput.toLowerCase() === a3.toLowerCase()) {
+      if (userInput3.toLowerCase() === a3.toLowerCase()) {
         console.log("correct answer");
         setDisplay(0);
         setColor3("#228B22");
@@ -199,7 +203,7 @@ const JavaScriptTypes = () => {
     }
     if (clicked4 === "clicked-four") {
       handleClose();
-      if (userInput.toLowerCase() === a4.toLowerCase()) {
+      if (userInput4.toLowerCase() === a4.toLowerCase()) {
         console.log("correct answer");
         setDisplay(0);
         setColor4("#228B22");
@@ -215,7 +219,7 @@ const JavaScriptTypes = () => {
     }
     if (clicked5 === "clicked-five") {
       handleClose();
-      if (userInput.toLowerCase() === a5.toLowerCase()) {
+      if (userInput5.toLowerCase() === a5.toLowerCase()) {
         console.log("correct answer");
         setDisplay(0);
         setColor5("#228B22");
@@ -289,16 +293,16 @@ const JavaScriptTypes = () => {
           backdrop="static"
           keyboard={false}
         >
-          <Modal.Header closeButton>
+          <Modal.Header>
             <Modal.Title>{q1}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <input
               type="text"
               placeholder="Answer"
-              value={userInput}
+              value={userInput1}
               id="user-input"
-              onChange={(e) => setUserInput(e.target.value)}
+              onChange={(e) => setUserInput1(e.target.value)}
               onKeyUp={searchKeyPress}
             />
           </Modal.Body>
@@ -325,16 +329,16 @@ const JavaScriptTypes = () => {
           backdrop="static"
           keyboard={false}
         >
-          <Modal.Header closeButton>
+          <Modal.Header>
             <Modal.Title>{q2}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <input
               type="text"
               placeholder="Answer"
-              value={userInput}
+              value={userInput2}
               id="user-input"
-              onChange={(e) => setUserInput(e.target.value)}
+              onChange={(e) => setUserInput2(e.target.value)}
               onKeyUp={searchKeyPress}
             />
           </Modal.Body>
@@ -361,16 +365,16 @@ const JavaScriptTypes = () => {
           backdrop="static"
           keyboard={false}
         >
-          <Modal.Header closeButton>
+          <Modal.Header>
             <Modal.Title>{q3}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <input
               type="text"
               placeholder="Answer"
-              value={userInput}
+              value={userInput3}
               id="user-input"
-              onChange={(e) => setUserInput(e.target.value)}
+              onChange={(e) => setUserInput3(e.target.value)}
               onKeyUp={searchKeyPress}
             />
           </Modal.Body>
@@ -397,16 +401,16 @@ const JavaScriptTypes = () => {
           backdrop="static"
           keyboard={false}
         >
-          <Modal.Header closeButton>
+          <Modal.Header>
             <Modal.Title>{q4}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <input
               type="text"
               placeholder="Answer"
-              value={userInput}
+              value={userInput4}
               id="user-input"
-              onChange={(e) => setUserInput(e.target.value)}
+              onChange={(e) => setUserInput4(e.target.value)}
               onKeyUp={searchKeyPress}
             />
           </Modal.Body>
@@ -433,16 +437,16 @@ const JavaScriptTypes = () => {
           backdrop="static"
           keyboard={false}
         >
-          <Modal.Header closeButton>
+          <Modal.Header>
             <Modal.Title>{q5}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <input
               type="text"
               placeholder="Answer"
-              value={userInput}
+              value={userInput5}
               id="user-input"
-              onChange={(e) => setUserInput(e.target.value)}
+              onChange={(e) => setUserInput5(e.target.value)}
               onKeyUp={searchKeyPress}
             />
           </Modal.Body>
