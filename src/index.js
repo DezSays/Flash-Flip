@@ -4,7 +4,11 @@ import './index.css';
 import App from './components/App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-// TODO Need to host custom api before deployment
+// TODO Add description notes on how many categories to select
+// TODO Show selected categories
+// TODO Add refresh categories button
+// TODO Display correct answer on screen, not just the console
+// TODO Add score functionality
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
