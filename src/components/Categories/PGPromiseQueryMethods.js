@@ -2,8 +2,13 @@ import React, { useState, useEffect } from "react";
 import Stack from "react-bootstrap/Stack";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
+import { useDispatch } from 'react-redux'
+import incrementScore from '../../actions/incrementScore.js' 
+import decrementScore from '../../actions/decrementScore.js' 
 
 const PGPromiseQueryMethods = () => {
+
+  const dispatch = useDispatch(); 
 
   const [q1, setQ1] = useState("");
   const [a1, setA1] = useState("");
@@ -36,6 +41,8 @@ const PGPromiseQueryMethods = () => {
   const [userInput3, setUserInput3] = useState("");
   const [userInput4, setUserInput4] = useState("");
   const [userInput5, setUserInput5] = useState("");
+  const [answerMessage, setAnswerMessage] = useState("")
+
 
   const [show, setShow] = useState(false);
 
@@ -111,6 +118,11 @@ const PGPromiseQueryMethods = () => {
     }
     return true;
   }
+  const resetInitialAnswerMessage = () => {
+    setAnswerMessage('')
+  }
+
+  setTimeout(resetInitialAnswerMessage, 8000)
 
   const handleClick1 = (e) => {
     setDisplay(1);
@@ -148,87 +160,100 @@ const PGPromiseQueryMethods = () => {
   };
 
   const handleClickQ = (e) => {
+    
     if (clicked1 === "clicked-one") {
       handleClose();
       if (userInput1.toLowerCase() === a1.toLowerCase()) {
-        console.log("correct answer");
+        setAnswerMessage("correct answer");
         setDisplay(0);
         setColor1("#228B22");
         setClicked1("complete-click");
-          
+        dispatch(incrementScore(100))
+        
+        
       } else {
-        console.log(`incorrect, the correct answer is ${a1}`);
+        setAnswerMessage(`incorrect, the correct answer is ${a1}`);
         setDisplay(0);
         setColor1("#9B1003");
         setClicked1("complete-click");
-          
+        dispatch(decrementScore(100))
       }
     }
     if (clicked2 === "clicked-two") {
       handleClose();
       if (userInput2.toLowerCase() === a2.toLowerCase()) {
-        console.log("correct answer");
+        setAnswerMessage("correct answer");
         setDisplay(0);
         setColor2("#228B22");
         setClicked2("complete-click");
-          
+        dispatch(incrementScore(200))
+
+        
       } else {
-        console.log(`incorrect, the correct answer is ${a2}`);
+        setAnswerMessage(`incorrect, the correct answer is ${a2}`);
         setDisplay(0);
         setColor2("#9B1003");
         setClicked2("complete-click");
-          
+        dispatch(decrementScore(200))
+        
       }
     }
     if (clicked3 === "clicked-three") {
       handleClose();
       if (userInput3.toLowerCase() === a3.toLowerCase()) {
-        console.log("correct answer");
+        setAnswerMessage("correct answer");
         setDisplay(0);
         setColor3("#228B22");
         setClicked3("complete-click");
-          
+        dispatch(incrementScore(300))
+        
       } else {
-        console.log(`incorrect, the correct answer is ${a3}`);
+        setAnswerMessage(`incorrect, the correct answer is ${a3}`);
         setDisplay(0);
         setColor3("#9B1003");
         setClicked3("complete-click");
-          
+        dispatch(decrementScore(300))
+        
       }
     }
     if (clicked4 === "clicked-four") {
       handleClose();
       if (userInput4.toLowerCase() === a4.toLowerCase()) {
-        console.log("correct answer");
+        setAnswerMessage("correct answer");
         setDisplay(0);
         setColor4("#228B22");
         setClicked4("complete-click");
-          
+        dispatch(incrementScore(400))
+        
       } else {
-        console.log(`incorrect, the correct answer is ${a4}`);
+        setAnswerMessage(`incorrect, the correct answer is ${a4}`);
         setDisplay(0);
         setColor4("#9B1003");
         setClicked4("complete-click");
-          
+        dispatch(decrementScore(400))
+        
       }
     }
     if (clicked5 === "clicked-five") {
       handleClose();
       if (userInput5.toLowerCase() === a5.toLowerCase()) {
-        console.log("correct answer");
+        setAnswerMessage("correct answer");
         setDisplay(0);
         setColor5("#228B22");
         setClicked5("complete-click");
-          
+        dispatch(incrementScore(500))
+        
       } else {
-        console.log(`incorrect, the correct answer is ${a5}`);
+        setAnswerMessage(`incorrect, the correct answer is ${a5}`);
         setDisplay(0);
         setColor5("#9B1003");
         setClicked5("complete-click");
-          
+        dispatch(decrementScore(500))
+        
       }
     }
   };
+
 
   if (display === 0) {
     return (
@@ -276,6 +301,9 @@ const PGPromiseQueryMethods = () => {
             $500
           </button>
         </Stack>
+        
+        <div>{answerMessage}</div>
+
       </>
     );
   }

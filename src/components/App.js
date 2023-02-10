@@ -15,8 +15,10 @@ import InformationalAndSuccessHTTPStatusCodes from "./Categories/InformationalAn
 import PythonListMethods from "./Categories/PythonListMethods";
 import JavaScriptMathMethods from "./Categories/JavaScriptMathMethods";
 import PythonErrorTypes from "./Categories/PythonErrorTypes";
+import { useSelector} from 'react-redux'
 
 const App = () => {
+  const score = useSelector(state => state.score) 
 
   const [category1, setCategory1] = useState("")
   const [category2, setCategory2] = useState("")
@@ -27,6 +29,8 @@ const App = () => {
   const [displayState, setDisplayState] = useState(0)
   const [isDisabled, setIsDisabled] = useState(false)
   const [isHidden, setIsHidden] = useState(true)
+
+
   
   let catArr = []
 
@@ -37,13 +41,20 @@ const App = () => {
   let c5 = category5
   let c6 = category6
 
-
+    
 
   const handleSelect = (e) => {
+    const ulCategories = document.getElementById('ul-selected-category')
+    const li = document.createElement('li')
     let val = e.target.value
+
     if(catArr.length < 7 && !catArr.includes(val)){
       catArr.push(val)
+      li.innerText = val
+      ulCategories.appendChild(li)
+  
     }
+
     console.log(catArr)
     if(catArr.length === 6){
       setCategory1(catArr[0])
@@ -55,6 +66,18 @@ const App = () => {
       setIsDisabled(true)
       setIsHidden(false)
     }
+
+
+  }
+
+  const clearSelection = () => {
+    setCategory1("")
+    setCategory2("")
+    setCategory3("")
+    setCategory4("")
+    setCategory5("")
+    setCategory6("")
+
   }
 
   const handleStartGame = () => {
@@ -306,7 +329,9 @@ const App = () => {
   }
 
  }
+ 
  finalSelection()
+
 
 if(displayState === 0){
 
@@ -375,6 +400,9 @@ if(displayState === 0){
               </Form.Check>
 
           </div>
+          <ul id="ul-selected-category"></ul>
+          <button onClick={clearSelection}>Reset Selection</button>
+
           <button hidden={isHidden} onClick={handleStartGame}>Start Game!</button>
       </Form>
       
@@ -385,6 +413,7 @@ if(displayState === 0){
 if(displayState === 1) {
     return(
       <Container>
+        <h4>Score: {score}</h4>
         <Row>
           <Col id="component-col-one">{c1}</Col>
           <Col id="component-col-two">{c2}</Col>
