@@ -5,9 +5,65 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+ background:inherit
+
+}
+
+*{
+  font-family: 'Kalam', cursive;
+}
+
+html {
+  height: 100%;
+  /* background-image: linear-gradient(180deg,#2B2D42, #8D99AE); */
+  background-image: url('../public/paper-background.jpg');
+background-repeat: no-repeat;
+background-size:cover;
+background-position: center;
+background-attachment: fixed;
+max-width: 100%;
+overflow-x: hidden;
+
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#main-text{
+  max-width:30%;
+  margin-left: 35%;
+
+
+}
+#landing-heading{
+  text-align: center;
+  margin: 10% 0% 1% 
+}
+#category-heading {
+  text-align: center;
+  margin: 10% 2% 2% 0% 
+}
+#landing-page-button:hover, #reset-btn:hover, #start-game-btn:hover {
+background-color:#dded71;
+}
+
+#landing-page-button, #reset-btn, #start-game-btn {
+  border-radius: 20%
+}
+
+
+#landing-page-div, #reset-start-btn-div{
+  text-align: center;
+  margin-top: 3%
+}
+
+#column1 {
+  margin-left:10%;
+}
+
+#column2{
+  margin-right: 10%;
 }

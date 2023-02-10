@@ -3,6 +3,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
+import LandingInstructions from "./Layout/LandingInstructions.js";
 import JavaScriptArrayMethods from "./Categories/JavaScriptArrayMethods";
 import HTTPRequestMethods from "./Categories/HTTPRequestMethods";
 import JavaScriptErrorTypes from "./Categories/JavaScriptErrorTypes";
@@ -55,6 +56,7 @@ const App = () => {
   
     }
 
+
     console.log(catArr)
     if(catArr.length === 6){
       setCategory1(catArr[0])
@@ -81,7 +83,7 @@ const App = () => {
   }
 
   const handleStartGame = () => {
-      setDisplayState(1)
+      setDisplayState(2)
   }
 
  const finalSelection = () => {
@@ -332,85 +334,115 @@ const App = () => {
  
  finalSelection()
 
+ const displayCategoryPageFunc = () => {
+  setDisplayState(1)
+ }
 
 if(displayState === 0){
 
   return (
     <>
-      <Form>
-          <div key="checkbox" className="mb-3">
-              <Form.Check type="checkbox">
-                <Form.Check.Input className="category-option" type="checkbox"  isValid disabled={isDisabled} onClick={handleSelect} value="javascript_array_methods"/>
-                <Form.Check.Label className="form-check-label">JavaScript Array Methods</Form.Check.Label>
-              </Form.Check>
-              
-              <Form.Check type="checkbox">
-                <Form.Check.Input className="category-option" type="checkbox"  isValid disabled={isDisabled} onClick={handleSelect} value="http_request_methods"/>
-                <Form.Check.Label className="form-check-label">HTTP Request Methods</Form.Check.Label>
-              </Form.Check>
-
-              <Form.Check type="checkbox">
-                <Form.Check.Input className="category-option" type="checkbox" isValid disabled={isDisabled} onClick={handleSelect} value="javascript_error_types"/>
-                <Form.Check.Label className="form-check-label">JavaScript Error Types</Form.Check.Label>
-              </Form.Check>
-
-              <Form.Check type="checkbox">
-                <Form.Check.Input className="category-option" type="checkbox"  isValid disabled={isDisabled} onClick={handleSelect} value="pg_promise_query_methods"/>
-                <Form.Check.Label className="form-check-label">PG Promise Query Methods</Form.Check.Label>
-              </Form.Check>
-
-              <Form.Check type="checkbox">
-                <Form.Check.Input className="category-option" type="checkbox"  isValid disabled={isDisabled} onClick={handleSelect} value="server_error_http_status_codes"/>
-                <Form.Check.Label className="form-check-label">Server Error HTTP Status Codes</Form.Check.Label>
-              </Form.Check>
-
-              <Form.Check type="checkbox">
-                <Form.Check.Input className="category-option" type="checkbox"  isValid disabled={isDisabled} onClick={handleSelect} value="client_error_http_status_codes"/>
-                <Form.Check.Label className="form-check-label">Client Error HTTP Status Codes</Form.Check.Label>
-              </Form.Check>
-
-              <Form.Check type="checkbox">
-                <Form.Check.Input className="category-option" type="checkbox"  isValid disabled={isDisabled} onClick={handleSelect} value="redirection_http_status_codes"/>
-                <Form.Check.Label className="form-check-label">Redirection HTTP Status Codes</Form.Check.Label>
-              </Form.Check>
-
-              <Form.Check type="checkbox">
-                <Form.Check.Input className="category-option" type="checkbox"  isValid disabled={isDisabled} onClick={handleSelect} value="javascript_types"/>
-                <Form.Check.Label className="form-check-label">JavaScript Types</Form.Check.Label>
-              </Form.Check>
-
-              <Form.Check type="checkbox">
-                <Form.Check.Input className="category-option" type="checkbox"  isValid disabled={isDisabled} onClick={handleSelect} value="informational_and_success_http_status_codes"/>
-                <Form.Check.Label className="form-check-label">Informational And Success HTTP Status Codes</Form.Check.Label>
-              </Form.Check>
-
-              <Form.Check type="checkbox">
-                <Form.Check.Input className="category-option" type="checkbox"  isValid disabled={isDisabled} onClick={handleSelect} value="python_list_methods"/>
-                <Form.Check.Label className="form-check-label">Python List Methods</Form.Check.Label>
-              </Form.Check>
-
-              <Form.Check type="checkbox">
-                <Form.Check.Input className="category-option" type="checkbox"  isValid disabled={isDisabled} onClick={handleSelect} value="javascript_math_methods"/>
-                <Form.Check.Label className="form-check-label">JavaScript Math Methods</Form.Check.Label>
-              </Form.Check>
-
-              <Form.Check type="checkbox">
-                <Form.Check.Input className="category-option" type="checkbox"  isValid disabled={isDisabled} onClick={handleSelect} value="python_error_types"/>
-                <Form.Check.Label className="form-check-label">Python Error Types</Form.Check.Label>
-              </Form.Check>
-
-          </div>
-          <ul id="ul-selected-category"></ul>
-          <button onClick={clearSelection}>Reset Selection</button>
-
-          <button hidden={isHidden} onClick={handleStartGame}>Start Game!</button>
-      </Form>
+    <h2 id="landing-heading">Flash-Flip</h2>
+    <LandingInstructions />  
+    <div id="landing-page-div">
+    <button id="landing-page-button" onClick={displayCategoryPageFunc}>Go to Select Categories</button>
       
-
+    </div>    
     </>
   );
 }
-if(displayState === 1) {
+if(displayState === 1){
+  return (
+    <Form id="form-categories">
+    <div id="custom-control custom-checkbox" key="checkbox" >
+      <h2 id="category-heading">Categories</h2>
+      <Row>
+        <Col></Col>
+        <Col id="column1">              
+          <Form.Check type="checkbox">
+          <Form.Check.Input type="checkbox"  isValid disabled={isDisabled} onClick={handleSelect} value="javascript_array_methods" id="cb-1"/>
+          <Form.Check.Label id="label1">JavaScript Array Methods</Form.Check.Label>
+          </Form.Check>
+          
+        <Form.Check type="checkbox">
+          <Form.Check.Input  type="checkbox"  isValid disabled={isDisabled} onClick={handleSelect} value="javascript_types"/>
+          <Form.Check.Label id="label12">JavaScript Types</Form.Check.Label>
+        </Form.Check>
+
+          <Form.Check type="checkbox">
+          <Form.Check.Input  type="checkbox" isValid disabled={isDisabled} onClick={handleSelect} value="javascript_error_types"/>
+          <Form.Check.Label id="label2">JavaScript Error Types</Form.Check.Label>
+        </Form.Check>
+
+
+        <Form.Check type="checkbox">
+          <Form.Check.Input  type="checkbox"  isValid disabled={isDisabled} onClick={handleSelect} value="javascript_math_methods"/>
+          <Form.Check.Label id="label3">JavaScript Math Methods</Form.Check.Label>
+        </Form.Check>
+
+        <Form.Check type="checkbox">
+          <Form.Check.Input  type="checkbox"  isValid disabled={isDisabled} onClick={handleSelect} value="python_list_methods"/>
+          <Form.Check.Label id="label4">Python List Methods</Form.Check.Label>
+        </Form.Check>
+
+
+        <Form.Check type="checkbox">
+          <Form.Check.Input  type="checkbox"  isValid disabled={isDisabled} onClick={handleSelect} value="python_error_types"/>
+          <Form.Check.Label id="label5">Python Error Types</Form.Check.Label>
+        </Form.Check>
+
+        </Col>
+
+
+
+        <Col id="column2">
+        <Form.Check type="checkbox">
+          <Form.Check.Input  type="checkbox"  isValid disabled={isDisabled} onClick={handleSelect} value="http_request_methods"/>
+          <Form.Check.Label id="label6">HTTP Request Methods</Form.Check.Label>
+        </Form.Check>
+
+        <Form.Check type="checkbox">
+          <Form.Check.Input  type="checkbox"  isValid disabled={isDisabled} onClick={handleSelect} value="server_error_http_status_codes"/>
+          <Form.Check.Label id="label7">Server Error HTTP Status Codes</Form.Check.Label>
+        </Form.Check>
+
+        <Form.Check type="checkbox">
+          <Form.Check.Input  type="checkbox"  isValid disabled={isDisabled} onClick={handleSelect} value="client_error_http_status_codes"/>
+          <Form.Check.Label id="label8">Client Error HTTP Status Codes</Form.Check.Label>
+        </Form.Check>
+
+        <Form.Check type="checkbox">
+          <Form.Check.Input  type="checkbox"  isValid disabled={isDisabled} onClick={handleSelect} value="redirection_http_status_codes"/>
+          <Form.Check.Label id="label9">Redirection HTTP Status Codes</Form.Check.Label>
+        </Form.Check>
+
+        <Form.Check type="checkbox">
+          <Form.Check.Input  type="checkbox"  isValid disabled={isDisabled} onClick={handleSelect} value="informational_and_success_http_status_codes"/>
+          <Form.Check.Label id="label10">Informational And Success HTTP Status Codes</Form.Check.Label>
+        </Form.Check>
+
+        <Form.Check type="checkbox">
+          <Form.Check.Input  type="checkbox"  isValid disabled={isDisabled} onClick={handleSelect} value="pg_promise_query_methods"/>
+          <Form.Check.Label id="label11">PG Promise Query Methods</Form.Check.Label>
+        </Form.Check>
+
+
+        </Col>
+        <Col></Col>
+      </Row>
+
+
+    </div>
+    <ul id="ul-selected-category"></ul>
+    <div id="reset-start-btn-div">
+      <button id="reset-btn" onClick={clearSelection}>Reset Selection</button>
+
+      <button id="start-game-btn" hidden={isHidden} onClick={handleStartGame}>Start Game!</button>
+    </div>
+</Form>
+  )
+}
+if(displayState === 2) {
     return(
       <Container>
         <h4>Score: {score}</h4>
