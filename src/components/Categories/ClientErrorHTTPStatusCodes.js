@@ -266,7 +266,7 @@ const ClientErrorHTTPStatusCodes = () => {
     return (
       <>
         <Stack gap={2}>
-          <button>Client Error HTTP Status Codes</button>
+          <button id="category-title">Client Error HTTP Status Codes</button>
           <button
             onClick={handleClick1}
             disabled={isDisabled1}

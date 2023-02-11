@@ -10,7 +10,8 @@ import reducer from './reducers/reducer'
 const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()) //reducer
 
 
-// TODO bug in refresh btn-- cant reset to displaystate1.
+// TODO bug in refresh btn-- cant reset to displaystate1
+// TODO change background to green/lime slash
 
 
 

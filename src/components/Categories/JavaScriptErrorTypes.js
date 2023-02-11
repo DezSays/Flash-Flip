@@ -258,7 +258,7 @@ const JavaScriptErrorTypes = () => {
     return (
       <>
         <Stack gap={2}>
-          <button>JavaScript Error Types</button>
+          <button id="category-title">JavaScript Error Types</button>
           <button
             onClick={handleClick1}
             disabled={isDisabled1}

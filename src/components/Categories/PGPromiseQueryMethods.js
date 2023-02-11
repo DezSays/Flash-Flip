@@ -259,7 +259,7 @@ const PGPromiseQueryMethods = () => {
     return (
       <>
         <Stack gap={2}>
-          <button>PG Promise Query Methods</button>
+          <button id="category-title">PG Promise Query Methods</button>
           <button
             onClick={handleClick1}
             disabled={isDisabled1}

@@ -270,7 +270,7 @@ const JavaScriptMathMethods = () => {
     return (
       <>
         <Stack gap={2}>
-          <button>JavaScript Math Methods</button>
+          <button id="category-title">JavaScript Math Methods</button>
           <button
             onClick={handleClick1}
             disabled={isDisabled1}

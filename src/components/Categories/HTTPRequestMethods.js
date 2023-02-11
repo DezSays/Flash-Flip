@@ -268,7 +268,7 @@ const HTTPRequestMethods = () => {
     return (
       <>
         <Stack gap={2}>
-          <button>HTTP Request Methods</button>
+          <button id="category-title">HTTP Request Methods</button>
           <button
             onClick={handleClick1}
             disabled={isDisabled1}

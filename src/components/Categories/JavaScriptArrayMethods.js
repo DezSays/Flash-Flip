@@ -269,7 +269,7 @@ const JavaScriptArrayMethods = () => {
     return (
       <>
         <Stack gap={2}>
-          <button>JavaScript Array Methods</button>
+          <button id="category-title">JavaScript Array Methods</button>
           <button
             onClick={handleClick1}
             disabled={isDisabled1}

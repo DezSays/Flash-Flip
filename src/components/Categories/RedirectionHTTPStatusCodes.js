@@ -266,7 +266,7 @@ const RedirectionHTTPStatusCodes = () => {
     return (
       <>
         <Stack gap={2}>
-          <button>Redirection HTTP Status Codes</button>
+          <button id="category-title">Redirection HTTP Status Codes</button>
           <button
             onClick={handleClick1}
             disabled={isDisabled1}

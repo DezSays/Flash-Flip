@@ -454,7 +454,6 @@ if(displayState === 2) {
           <Col id="component-col-five">{c5}</Col>
           <Col id="component-col-six">{c6}</Col>
         </Row>
-        
 
       </Container>
 

@@ -269,7 +269,7 @@ const InformationalAndSuccessHTTPStatusCodes = () => {
     return (
       <>
         <Stack gap={2}>
-          <button>Informational And Success HTTP Status Codes</button>
+          <button id="category-title">Informational And Success HTTP Status Codes</button>
           <button
             onClick={handleClick1}
             disabled={isDisabled1}

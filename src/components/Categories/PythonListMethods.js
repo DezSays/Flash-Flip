@@ -268,7 +268,7 @@ const PythonListMethods = () => {
     return (
       <>
         <Stack gap={2}>
-          <button>Python List Methods</button>
+          <button id="category-title">Python List Methods</button>
           <button
             onClick={handleClick1}
             disabled={isDisabled1}

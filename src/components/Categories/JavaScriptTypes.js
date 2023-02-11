@@ -264,7 +264,7 @@ const JavaScriptTypes = () => {
     return (
       <>
         <Stack gap={2}>
-          <button>JavaScript Types</button>
+          <button id="category-title">JavaScript Types</button>
           <button
             onClick={handleClick1}
             disabled={isDisabled1}

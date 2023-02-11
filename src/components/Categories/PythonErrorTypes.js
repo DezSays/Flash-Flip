@@ -270,7 +270,7 @@ const PythonErrorTypes = () => {
     return (
       <>
         <Stack gap={2}>
-          <button>Python Error Types</button>
+          <button id="category-title">Python Error Types</button>
           <button
             onClick={handleClick1}
             disabled={isDisabled1}

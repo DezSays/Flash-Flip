@@ -54,6 +54,15 @@ background-color:#dded71;
   border-radius: 20%
 }
 
+#category-title {
+  border-radius: 20%;
+  background-image: url('../public/sample-cat-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-weight: bold;
+}
+
 
 #landing-page-div, #reset-start-btn-div{
   text-align: center;
