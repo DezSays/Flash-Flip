@@ -11,7 +11,7 @@ const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window
 
 
 // TODO bug in refresh btn-- cant reset to displaystate1
-// TODO change background to green/lime slash
+
 
 
 

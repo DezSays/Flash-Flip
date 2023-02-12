@@ -341,21 +341,28 @@ const App = () => {
 if(displayState === 0){
 
   return (
-    <>
-    <h2 id="landing-heading">Flash-Flip</h2>
-    <LandingInstructions />  
-    <div id="landing-page-div">
-    <button id="landing-page-button" onClick={displayCategoryPageFunc}>Go to Select Categories</button>
-      
-    </div>    
-    </>
+    <div>
+      <h1 id="landing-heading">Flash-Flip</h1>
+      <LandingInstructions />
+    
+      <div id="landing-page-div">
+        <button id="landing-page-button" onClick={displayCategoryPageFunc}>Click Here to See Category Options</button>  
+      </div>  
+ 
+
+
+    </div>
   );
 }
 if(displayState === 1){
   return (
+    <>
+
+
     <Form id="form-categories">
     <div id="custom-control custom-checkbox" key="checkbox" >
       <h2 id="category-heading">Categories</h2>
+
       <Row>
         <Col></Col>
         <Col id="column1">              
@@ -418,7 +425,7 @@ if(displayState === 1){
 
         <Form.Check type="checkbox">
           <Form.Check.Input  type="checkbox"  isValid disabled={isDisabled} onClick={handleSelect} value="informational_and_success_http_status_codes"/>
-          <Form.Check.Label id="label10">Informational And Success HTTP Status Codes</Form.Check.Label>
+          <Form.Check.Label id="label10">Informational & Success HTTP Status Codes</Form.Check.Label>
         </Form.Check>
 
         <Form.Check type="checkbox">
@@ -428,24 +435,26 @@ if(displayState === 1){
 
 
         </Col>
-        <Col></Col>
+        <Col>
+        <ul id="ul-selected-category"></ul>
+        </Col>
       </Row>
 
 
     </div>
-    <ul id="ul-selected-category"></ul>
+
     <div id="reset-start-btn-div">
       <button id="reset-btn" onClick={clearSelection}>Reset Selection</button>
 
       <button id="start-game-btn" hidden={isHidden} onClick={handleStartGame}>Start Game!</button>
     </div>
-</Form>
+    </Form>
+    </>
   )
 }
 if(displayState === 2) {
     return(
-      <Container>
-        <h4>Score: {score}</h4>
+      <Container id="game-layout">
         <Row>
           <Col id="component-col-one">{c1}</Col>
           <Col id="component-col-two">{c2}</Col>
@@ -454,6 +463,8 @@ if(displayState === 2) {
           <Col id="component-col-five">{c5}</Col>
           <Col id="component-col-six">{c6}</Col>
         </Row>
+        <br/>
+        <h1>Score: {score}</h1>
 
       </Container>
 
