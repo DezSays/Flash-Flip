@@ -61,9 +61,13 @@ background-color:#a6f25a;
   border-radius: 20%
 }
 
-#reset-btn, #start-game-btn{
+#start-game-btn{
 font-size: 160%;
 margin:0% 1% 0%
+}
+#reset-btn{
+font-size: 160%;
+
 }
 
 #landing-page-button {
@@ -88,22 +92,46 @@ margin:0% 1% 0%
   font-weight: normal;
 }
 
-#landing-page-div, #reset-start-btn-div{
+#landing-page-div, #start-btn-div{
   text-align: center;
   margin-top: 3%
 }
 
 
 #column1 {
-  margin-left:10%;
+
   font-weight: bold;
 }
 
+#selected-categories-column {
+  font-weight: bold;
+
+
+}
+
 #column2{
-  margin-right: 10%;
+
   font-weight: bold;
 }
 
 #game-layout{
-  font-size:200%
+  font-size:200%;
+  position: relative;
+}
+
+#score-container{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 17%;
+  margin-bottom:3%;
+
+}
+
+#space-holder{
+  max-width: 10%;
+}
+
+li{
+  list-style-image: url('../public/li-tag-img-final.png');
 }

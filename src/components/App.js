@@ -42,6 +42,19 @@ const App = () => {
   let c5 = category5
   let c6 = category6
 
+  let jam = 'javascript_array_methods'
+  let hrm = 'http_request_methods'
+  let jet = 'javascript_error_types'
+  let pgp = 'pg_promise_query_methods'
+  let sehsc = 'server_error_http_status_codes'
+  let cehsc = 'client_error_http_status_codes'
+  let rhsc = 'redirection_http_status_codes'
+  let jt = 'javascript_types'
+  let ishsc = 'informational_and_success_http_status_codes'
+  let plm = 'python_list_methods'
+  let jmm = 'javascript_math_methods'
+  let pet = 'python_error_types'
+
     
 
   const handleSelect = (e) => {
@@ -51,8 +64,67 @@ const App = () => {
 
     if(catArr.length < 7 && !catArr.includes(val)){
       catArr.push(val)
-      li.innerText = val
-      ulCategories.appendChild(li)
+
+      if(val === jam){
+        let val = 'JavaScript Array Methods'
+        li.innerText = val
+        ulCategories.appendChild(li)
+      }
+      if(val === plm){
+        let val = 'Python List Methods'
+        li.innerText = val
+        ulCategories.appendChild(li)
+      }
+      if(val === jmm){
+        let val = 'JavaScript Math Methods'
+        li.innerText = val
+        ulCategories.appendChild(li)
+      }
+      if(val === pet){
+        let val = 'Python Error Types'
+        li.innerText = val
+        ulCategories.appendChild(li)
+      }
+      if(val === hrm){
+        let val = 'HTTP Request Methods'
+        li.innerText = val
+        ulCategories.appendChild(li)
+      }
+      if(val === jet){
+        let val = 'JavaScript Error Types'
+        li.innerText = val
+        ulCategories.appendChild(li)
+      }
+      if(val === pgp){
+        let val = 'PG Promise Query Methods'
+        li.innerText = val
+        ulCategories.appendChild(li)
+      }
+      if(val === sehsc){
+        let val = 'Server Error HTTP Status Codes'
+        li.innerText = val
+        ulCategories.appendChild(li)
+      }
+      if(val === cehsc){
+        let val = 'Client Error HTTP Status Codes'
+        li.innerText = val
+        ulCategories.appendChild(li)
+      }
+      if(val === rhsc){
+        let val = 'Redirection Error HTTP Status Codes'
+        li.innerText = val
+        ulCategories.appendChild(li)
+      }
+      if(val === jt){
+        let val = 'JavaScript Types'
+        li.innerText = val
+        ulCategories.appendChild(li)
+      }
+      if(val === ishsc){
+        let val = 'Informational & Success HTTP Status Codes'
+        li.innerText = val
+        ulCategories.appendChild(li)
+      }
   
     }
 
@@ -68,7 +140,6 @@ const App = () => {
       setIsDisabled(true)
       setIsHidden(false)
     }
-
 
   }
 
@@ -87,18 +158,6 @@ const App = () => {
   }
 
  const finalSelection = () => {
-  let jam = 'javascript_array_methods'
-  let hrm = 'http_request_methods'
-  let jet = 'javascript_error_types'
-  let pgp = 'pg_promise_query_methods'
-  let sehsc = 'server_error_http_status_codes'
-  let cehsc = 'client_error_http_status_codes'
-  let rhsc = 'redirection_http_status_codes'
-  let jt = 'javascript_types'
-  let ishsc = 'informational_and_success_http_status_codes'
-  let plm = 'python_list_methods'
-  let jmm = 'javascript_math_methods'
-  let pet = 'python_error_types'
 
 
   // JavaScript Array Methods
@@ -334,6 +393,7 @@ const App = () => {
  
  finalSelection()
 
+
  const displayCategoryPageFunc = () => {
   setDisplayState(1)
  }
@@ -364,7 +424,10 @@ if(displayState === 1){
       <h2 id="category-heading">Categories</h2>
 
       <Row>
-        <Col></Col>
+
+        <Col id="space-holder"></Col>
+
+
         <Col id="column1">              
           <Form.Check type="checkbox">
           <Form.Check.Input type="checkbox"  isValid disabled={isDisabled} onClick={handleSelect} value="javascript_array_methods" id="cb-1"/>
@@ -435,17 +498,21 @@ if(displayState === 1){
 
 
         </Col>
-        <Col>
+
+        <Col id="selected-categories-column">
         <ul id="ul-selected-category"></ul>
+    <div id="reset-btn-div">
+      <button id="reset-btn" onClick={clearSelection}>Reset Selection</button>
+    </div>
         </Col>
+
+        <Col id="space-holder"></Col>
+
       </Row>
 
 
     </div>
-
-    <div id="reset-start-btn-div">
-      <button id="reset-btn" onClick={clearSelection}>Reset Selection</button>
-
+    <div id="start-btn-div">
       <button id="start-game-btn" hidden={isHidden} onClick={handleStartGame}>Start Game!</button>
     </div>
     </Form>
@@ -454,6 +521,7 @@ if(displayState === 1){
 }
 if(displayState === 2) {
     return(
+      <>
       <Container id="game-layout">
         <Row>
           <Col id="component-col-one">{c1}</Col>
@@ -463,10 +531,13 @@ if(displayState === 2) {
           <Col id="component-col-five">{c5}</Col>
           <Col id="component-col-six">{c6}</Col>
         </Row>
-        <br/>
+      </Container>
+      <div id="score-container">
         <h1>Score: {score}</h1>
 
-      </Container>
+      </div>
+
+      </>
 
     )
 }
