@@ -66,8 +66,8 @@ font-size: 160%;
 margin:0% 1% 0%
 }
 #reset-btn{
-font-size: 160%;
-
+  font-size: 160%;
+  margin:0% 1% 0%
 }
 
 #landing-page-button {
@@ -134,4 +134,11 @@ font-size: 160%;
 
 li{
   list-style-image: url('../public/li-tag-img-final.png');
+
+}
+
+ul{
+  border-color: #ca788e;
+  border-style: dashed;
+  font-size: 160%;
 }

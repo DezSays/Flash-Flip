@@ -500,10 +500,8 @@ if(displayState === 1){
         </Col>
 
         <Col id="selected-categories-column">
-        <ul id="ul-selected-category"></ul>
-    <div id="reset-btn-div">
-      <button id="reset-btn" onClick={clearSelection}>Reset Selection</button>
-    </div>
+        <ul id="ul-selected-category"><h1>Selected Categories:</h1></ul>
+
         </Col>
 
         <Col id="space-holder"></Col>
@@ -514,7 +512,9 @@ if(displayState === 1){
     </div>
     <div id="start-btn-div">
       <button id="start-game-btn" hidden={isHidden} onClick={handleStartGame}>Start Game!</button>
+      <button id="reset-btn" hidden={isHidden} onClick={clearSelection}>Reset Game</button>
     </div>
+
     </Form>
     </>
   )
