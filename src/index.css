@@ -133,8 +133,7 @@ margin:0% 1% 0%
 }
 
 li{
-  list-style-image: url('../public/li-tag-img-final.png');
-
+  list-style-type: none;
 }
 
 ul{
