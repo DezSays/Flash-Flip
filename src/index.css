@@ -45,13 +45,16 @@ code {
 #landing-heading{
   text-align: center;
   margin: 4% 0% 1% ;
-  font-size: 650%
+  font-size: 650%;
+  font-weight: 900;
 }
 
 #category-heading {
   text-align: center;
   margin: 4% 2% 2% 0%;
-  font-size: 700%;
+  font-size: 650%;
+  font-weight: 900;
+
 }
 #landing-page-button:hover, #reset-btn:hover, #start-game-btn:hover {
 background-color:#a6f25a;
@@ -62,11 +65,11 @@ background-color:#a6f25a;
 }
 
 #start-game-btn{
-font-size: 160%;
+font-size: 120%;
 margin:0% 1% 0%
 }
 #reset-btn{
-  font-size: 160%;
+  font-size: 120%;
   margin:0% 1% 0%
 }
 
@@ -85,9 +88,9 @@ margin:0% 1% 0%
   font-size: 70%;
 }
 
-#label1, #label2, #label3, #label4, #label5, #label6, #label7, #label8, #label9, #label10, #label11, #label12 {
+#label1, #label2, #label3, #label4, #label5, #label6, #label7, #label8, #label9, #label10, #label11, #label12, #label13, #label14, #label15, #label16, #label17, #label18 {
   color:black;
-  font-size: 160%;
+  font-size: 120%;
   margin-top: 2%;
   font-weight: normal;
 }
@@ -133,11 +136,19 @@ margin:0% 1% 0%
 }
 
 li{
-  list-style-type: none;
+  float:left;
+  margin: 0% 5% 0%
+
+} 
+
+ol{
+
+  font-size: 120%;
+  list-style-type: decimal;
+
 }
 
-ul{
+#selected-categories-column{
   border-color: #ca788e;
   border-style: dashed;
-  font-size: 160%;
 }
