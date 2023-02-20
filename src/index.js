@@ -9,7 +9,7 @@ import reducer from './reducers/reducer'
 
 const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()) //reducer
 
-// TODO add remaining categories (12 left)
+// TODO add remaining categories (6 left)
 // TODO ReadMe
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

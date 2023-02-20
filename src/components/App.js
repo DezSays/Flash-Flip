@@ -852,7 +852,7 @@ const App = () => {
   } else {
     return (
       <h1>
-        Oops, our bad. You have found our secret error page you little hacker.
+        Well, that's embarassing. There has been an error, but we will fix it as soon as possible. 
       </h1>
     );
   }

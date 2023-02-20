@@ -34,7 +34,7 @@ code {
 
 #main-text{
   display: inline-block;  
-  margin: 2px;
+  margin: 5% 0% 0%;
   width: 60%;
   font-size: 250%;
 }
@@ -92,7 +92,7 @@ margin:0% 1% 0%
   color:black;
   font-size: 120%;
   margin-top: 2%;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 #landing-page-div, #start-btn-div{
@@ -101,8 +101,8 @@ margin:0% 1% 0%
 }
 
 
-#column1 {
-
+#column1, #column2, #column3, #column4 {
+  margin:2% 0% 1%;
   font-weight: bold;
 }
 
@@ -112,10 +112,6 @@ margin:0% 1% 0%
 
 }
 
-#column2{
-
-  font-weight: bold;
-}
 
 #game-layout{
   font-size:200%;
