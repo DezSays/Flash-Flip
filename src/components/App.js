@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -23,9 +22,9 @@ import SQLKeywords from "./Categories/SQLKeywords";
 import JavaScriptStringMethods from "./Categories/JavaScriptStringMethods";
 import SortingAlgorithms from "./Categories/SortingAlgorithms";
 import JavaScriptDateMethodsAndProperties from "./Categories/JavaScriptDateMethodsAndProperties";
+import FooterScore from "./Layout/FooterScore.js";
 
 const App = () => {
-  const score = useSelector((state) => state.score);
 
   const [category1, setCategory1] = useState("");
   const [category2, setCategory2] = useState("");
@@ -844,9 +843,7 @@ const App = () => {
             <Col id="component-col-six">{c6}</Col>
           </Row>
         </Container>
-        <div id="score-container">
-          <h1>Score: {score}</h1>
-        </div>
+        <FooterScore />
       </>
     );
   } else {

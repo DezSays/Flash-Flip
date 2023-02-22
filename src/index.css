@@ -27,6 +27,20 @@ overflow-x: hidden;
   
 }
 
+.footer-container{
+  box-sizing: border-box;
+  width: 100%;
+  font: normal 250% sans-serif;
+  padding: 1%;
+  position:fixed;
+  bottom:0;
+
+}
+
+#score-text-container{
+  justify-content: right;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -118,14 +132,6 @@ margin:0% 1% 0%
   position: relative;
 }
 
-#score-container{
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  margin-right: 17%;
-  margin-bottom:3%;
-
-}
 
 #space-holder{
   max-width: 10%;
