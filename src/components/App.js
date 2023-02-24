@@ -716,7 +716,11 @@ const App = () => {
         <Form id="form-categories">
           <div id="custom-control custom-checkbox" key="checkbox">
             <h2 id="category-heading">Categories</h2>
-            <h2 id="category-instructions"><span id="category-instructions-span">Select 6 categories from the choices below:</span></h2>
+            <h2 id="category-instructions">
+              <span id="category-instructions-span">
+                Select 6 categories from the choices below:
+              </span>
+            </h2>
 
             <Row>
               <Col id="column1">

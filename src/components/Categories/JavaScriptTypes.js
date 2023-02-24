@@ -2,13 +2,12 @@ import React, { useState, useEffect } from "react";
 import Stack from "react-bootstrap/Stack";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import { useDispatch } from 'react-redux'
-import incrementScore from '../../actions/incrementScore.js' 
-import decrementScore from '../../actions/decrementScore.js' 
+import { useDispatch } from "react-redux";
+import incrementScore from "../../actions/incrementScore.js";
+import decrementScore from "../../actions/decrementScore.js";
 
 const JavaScriptTypes = () => {
-
-  const dispatch = useDispatch(); 
+  const dispatch = useDispatch();
 
   function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -48,8 +47,7 @@ const JavaScriptTypes = () => {
   const [userInput3, setUserInput3] = useState("");
   const [userInput4, setUserInput4] = useState("");
   const [userInput5, setUserInput5] = useState("");
-  const [answerMessage, setAnswerMessage] = useState("")
-
+  const [answerMessage, setAnswerMessage] = useState("");
 
   const [show, setShow] = useState(false);
 
@@ -125,10 +123,10 @@ const JavaScriptTypes = () => {
     return true;
   }
   const resetInitialAnswerMessage = () => {
-    setAnswerMessage('')
-  }
+    setAnswerMessage("");
+  };
 
-  setTimeout(resetInitialAnswerMessage, 8000)
+  setTimeout(resetInitialAnswerMessage, 8000);
 
   const handleClick1 = (e) => {
     setDisplay(1);
@@ -166,7 +164,6 @@ const JavaScriptTypes = () => {
   };
 
   const handleClickQ = (e) => {
-    
     if (clicked1 === "clicked-one") {
       handleClose();
       if (userInput1.toLowerCase() === a1.toLowerCase()) {
@@ -174,15 +171,13 @@ const JavaScriptTypes = () => {
         setDisplay(0);
         setColor1("#228B22");
         setClicked1("complete-click");
-        dispatch(incrementScore(100))
-        
-        
+        dispatch(incrementScore(100));
       } else {
         setAnswerMessage(`incorrect, the correct answer is ${a1}`);
         setDisplay(0);
         setColor1("#9B1003");
         setClicked1("complete-click");
-        dispatch(decrementScore(100))
+        dispatch(decrementScore(100));
       }
     }
     if (clicked2 === "clicked-two") {
@@ -192,16 +187,13 @@ const JavaScriptTypes = () => {
         setDisplay(0);
         setColor2("#228B22");
         setClicked2("complete-click");
-        dispatch(incrementScore(200))
-
-        
+        dispatch(incrementScore(200));
       } else {
         setAnswerMessage(`incorrect, the correct answer is ${a2}`);
         setDisplay(0);
         setColor2("#9B1003");
         setClicked2("complete-click");
-        dispatch(decrementScore(200))
-        
+        dispatch(decrementScore(200));
       }
     }
     if (clicked3 === "clicked-three") {
@@ -211,15 +203,13 @@ const JavaScriptTypes = () => {
         setDisplay(0);
         setColor3("#228B22");
         setClicked3("complete-click");
-        dispatch(incrementScore(300))
-        
+        dispatch(incrementScore(300));
       } else {
         setAnswerMessage(`incorrect, the correct answer is ${a3}`);
         setDisplay(0);
         setColor3("#9B1003");
         setClicked3("complete-click");
-        dispatch(decrementScore(300))
-        
+        dispatch(decrementScore(300));
       }
     }
     if (clicked4 === "clicked-four") {
@@ -229,15 +219,13 @@ const JavaScriptTypes = () => {
         setDisplay(0);
         setColor4("#228B22");
         setClicked4("complete-click");
-        dispatch(incrementScore(400))
-        
+        dispatch(incrementScore(400));
       } else {
         setAnswerMessage(`incorrect, the correct answer is ${a4}`);
         setDisplay(0);
         setColor4("#9B1003");
         setClicked4("complete-click");
-        dispatch(decrementScore(400))
-        
+        dispatch(decrementScore(400));
       }
     }
     if (clicked5 === "clicked-five") {
@@ -247,15 +235,13 @@ const JavaScriptTypes = () => {
         setDisplay(0);
         setColor5("#228B22");
         setClicked5("complete-click");
-        dispatch(incrementScore(500))
-        
+        dispatch(incrementScore(500));
       } else {
         setAnswerMessage(`incorrect, the correct answer is ${a5}`);
         setDisplay(0);
         setColor5("#9B1003");
         setClicked5("complete-click");
-        dispatch(decrementScore(500))
-        
+        dispatch(decrementScore(500));
       }
     }
   };
@@ -308,7 +294,6 @@ const JavaScriptTypes = () => {
         </Stack>
 
         <div>{answerMessage}</div>
-
       </>
     );
   }

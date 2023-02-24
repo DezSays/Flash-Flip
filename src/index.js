@@ -1,18 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './components/App';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import {createStore} from 'redux'; 
-import {Provider} from 'react-redux'
-import reducer from './reducers/reducer'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./components/App";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { createStore } from "redux";
+import { Provider } from "react-redux";
+import reducer from "./reducers/reducer";
 
-const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()) //reducer
+const store = createStore(
+  reducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+); //reducer
 
-// TODO add remaining categories (6 left)
-// TODO ReadMe
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
     <React.StrictMode>
@@ -20,5 +20,3 @@ root.render(
     </React.StrictMode>
   </Provider>
 );
-
-

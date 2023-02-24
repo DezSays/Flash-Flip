@@ -1,64 +1,60 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
- background:inherit
-
+  background: inherit;
 }
 
-*{
-  font-family: 'Kalam', cursive;
+* {
+  font-family: "Kalam", cursive;
 }
 
 html {
   height: 100%;
   /* background-image: linear-gradient(180deg,#2B2D42, #8D99AE); */
-  background-image: url('../public/main-background.png');
-background-repeat: no-repeat;
-background-size:cover;
-background-position: center;
-background-attachment: fixed;
-max-width: 100%;
-overflow-x: hidden;
-
-  
+  background-image: url("../public/main-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
-.footer-container{
+.footer-container {
   box-sizing: border-box;
   width: 100%;
   font: normal 250% sans-serif;
   padding: 1%;
-  position:fixed;
-  bottom:0;
-
+  position: fixed;
+  bottom: 0;
 }
 
-#score-text-container{
+#score-text-container {
   justify-content: right;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-#main-text{
-  display: inline-block;  
+#main-text {
+  display: inline-block;
   margin: 5% 0% 0%;
   width: 60%;
   font-size: 250%;
 }
-#main-text-div{
+#main-text-div {
   width: 100%;
   text-align: center;
 }
-#landing-heading{
+#landing-heading {
   text-align: center;
-  margin: 4% 0% 1% ;
+  margin: 4% 0% 1%;
   font-size: 650%;
   font-weight: 900;
 }
@@ -68,23 +64,26 @@ code {
   margin: 4% 2% 2% 0%;
   font-size: 650%;
   font-weight: 900;
-
 }
-#landing-page-button:hover, #reset-btn:hover, #start-game-btn:hover {
-background-color:#a6f25a;
-}
-
-#landing-page-button, #reset-btn, #start-game-btn {
-  border-radius: 20%
+#landing-page-button:hover,
+#reset-btn:hover,
+#start-game-btn:hover {
+  background-color: #a6f25a;
 }
 
-#start-game-btn{
-font-size: 120%;
-margin:0% 1% 0%
+#landing-page-button,
+#reset-btn,
+#start-game-btn {
+  border-radius: 20%;
 }
-#reset-btn{
+
+#start-game-btn {
   font-size: 120%;
-  margin:0% 1% 0%
+  margin: 0% 1% 0%;
+}
+#reset-btn {
+  font-size: 120%;
+  margin: 0% 1% 0%;
 }
 
 #landing-page-button {
@@ -92,76 +91,98 @@ margin:0% 1% 0%
 }
 #category-title {
   border-radius: 20%;
-  background-image: url('../public/sample-cat-bg.jpg');
+  background-image: url("../public/sample-cat-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  font-weight:bold;
-  height:25vh;
-  margin:10% 0% 10%;
+  font-weight: bold;
+  height: 25vh;
+  margin: 10% 0% 10%;
   font-size: 70%;
 }
 
-#label1, #label2, #label3, #label4, #label5, #label6, #label7, #label8, #label9, #label10, #label11, #label12, #label13, #label14, #label15, #label16, #label17, #label18, #label19, #label20, #label21, #label22, #label23, #label24 {
-  color:black;
+#label1,
+#label2,
+#label3,
+#label4,
+#label5,
+#label6,
+#label7,
+#label8,
+#label9,
+#label10,
+#label11,
+#label12,
+#label13,
+#label14,
+#label15,
+#label16,
+#label17,
+#label18,
+#label19,
+#label20,
+#label21,
+#label22,
+#label23,
+#label24 {
+  color: black;
   font-size: 120%;
   margin-top: 2%;
   font-weight: bold;
 }
 
-#landing-page-div, #start-btn-div{
+#landing-page-div,
+#start-btn-div {
   text-align: center;
-  margin-top: 3%
+  margin-top: 3%;
 }
 
-
-#column1, #column2, #column3, #column4 {
-  margin:2% 1% 1% 5%;
+#column1,
+#column2,
+#column3,
+#column4 {
+  margin: 2% 1% 1% 5%;
   font-weight: bold;
 }
 
-#game-layout{
-  font-size:200%;
+#game-layout {
+  font-size: 200%;
   position: relative;
 }
 
-
-#space-holder{
+#space-holder {
   max-width: 10%;
 }
 
-li{
-  float:left;
-  margin: 0% 5% 0%
-
-} 
-
-ol{
-
-  font-size: 120%;
-  list-style-type: decimal;
-
+li {
+  float: left;
+  margin: 0% 5% 0%;
 }
 
-#selected-categories-column{
+ol {
+  font-size: 120%;
+  list-style-type: decimal;
+}
+
+#selected-categories-column {
   border-color: #ca788e;
   border-style: dashed;
   font-weight: bold;
-  width:80vw;
+  width: 80vw;
   background-color: rgb(172, 242, 96, 0.7);
   text-align: center;
 }
 
-#category-instructions{
+#category-instructions {
   text-align: center;
   font-weight: bold;
   text-decoration: underline;
-  margin-top:4%
+  margin-top: 4%;
 }
 
-#category-instructions-span{
+#category-instructions-span {
   border-color: #ca788e;
   border-style: dashed;
   background-color: rgb(172, 242, 96, 0.7);
-  padding:0% 2% 0%;
+  padding: 0% 2% 0%;
 }

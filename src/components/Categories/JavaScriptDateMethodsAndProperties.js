@@ -2,13 +2,12 @@ import React, { useState, useEffect } from "react";
 import Stack from "react-bootstrap/Stack";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import { useDispatch } from 'react-redux'
-import incrementScore from '../../actions/incrementScore.js' 
-import decrementScore from '../../actions/decrementScore.js' 
-
+import { useDispatch } from "react-redux";
+import incrementScore from "../../actions/incrementScore.js";
+import decrementScore from "../../actions/decrementScore.js";
 
 const JavaScriptDateMethodsAndProperties = () => {
-  const dispatch = useDispatch(); 
+  const dispatch = useDispatch();
 
   function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -48,8 +47,8 @@ const JavaScriptDateMethodsAndProperties = () => {
   const [userInput3, setUserInput3] = useState("");
   const [userInput4, setUserInput4] = useState("");
   const [userInput5, setUserInput5] = useState("");
-  const [answerMessage, setAnswerMessage] = useState("")
-  
+  const [answerMessage, setAnswerMessage] = useState("");
+
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -62,7 +61,8 @@ const JavaScriptDateMethodsAndProperties = () => {
 
     let idx1 = getRandomInt(0, 3);
 
-    const lvl1 = data.javascript_date_methods_and_properties.level[0].one[`${idx1}`];
+    const lvl1 =
+      data.javascript_date_methods_and_properties.level[0].one[`${idx1}`];
     const question1 = lvl1.question;
     const answer1 = lvl1.answer;
 
@@ -73,7 +73,8 @@ const JavaScriptDateMethodsAndProperties = () => {
 
     let idx2 = getRandomInt(0, 9);
 
-    const lvl2 = data.javascript_date_methods_and_properties.level[1].two[`${idx2}`];
+    const lvl2 =
+      data.javascript_date_methods_and_properties.level[1].two[`${idx2}`];
     const question2 = lvl2.question;
     const answer2 = lvl2.answer;
 
@@ -84,7 +85,8 @@ const JavaScriptDateMethodsAndProperties = () => {
 
     let idx3 = getRandomInt(0, 5);
 
-    const lvl3 = data.javascript_date_methods_and_properties.level[2].three[`${idx3}`];
+    const lvl3 =
+      data.javascript_date_methods_and_properties.level[2].three[`${idx3}`];
     const question3 = lvl3.question;
     const answer3 = lvl3.answer;
 
@@ -95,7 +97,8 @@ const JavaScriptDateMethodsAndProperties = () => {
 
     let idx4 = getRandomInt(0, 8);
 
-    const lvl4 = data.javascript_date_methods_and_properties.level[3].four[`${idx4}`];
+    const lvl4 =
+      data.javascript_date_methods_and_properties.level[3].four[`${idx4}`];
     const question4 = lvl4.question;
     const answer4 = lvl4.answer;
 
@@ -106,7 +109,8 @@ const JavaScriptDateMethodsAndProperties = () => {
 
     let idx5 = getRandomInt(0, 18);
 
-    const lvl5 = data.javascript_date_methods_and_properties.level[4].five[`${idx5}`];
+    const lvl5 =
+      data.javascript_date_methods_and_properties.level[4].five[`${idx5}`];
     const question5 = lvl5.question;
     const answer5 = lvl5.answer;
 
@@ -131,11 +135,10 @@ const JavaScriptDateMethodsAndProperties = () => {
   }
 
   const resetInitialAnswerMessage = () => {
-    setAnswerMessage('')
-  }
+    setAnswerMessage("");
+  };
 
-  setTimeout(resetInitialAnswerMessage, 8000)
-
+  setTimeout(resetInitialAnswerMessage, 8000);
 
   const handleClick1 = (e) => {
     setDisplay(1);
@@ -173,7 +176,6 @@ const JavaScriptDateMethodsAndProperties = () => {
   };
 
   const handleClickQ = (e) => {
-    
     if (clicked1 === "clicked-one") {
       handleClose();
       if (userInput1.toLowerCase() === a1.toLowerCase()) {
@@ -181,15 +183,13 @@ const JavaScriptDateMethodsAndProperties = () => {
         setDisplay(0);
         setColor1("#228B22");
         setClicked1("complete-click");
-        dispatch(incrementScore(100))
-        
-        
+        dispatch(incrementScore(100));
       } else {
         setAnswerMessage(`incorrect, the correct answer is ${a1}`);
         setDisplay(0);
         setColor1("#9B1003");
         setClicked1("complete-click");
-        dispatch(decrementScore(100))
+        dispatch(decrementScore(100));
       }
     }
     if (clicked2 === "clicked-two") {
@@ -199,16 +199,13 @@ const JavaScriptDateMethodsAndProperties = () => {
         setDisplay(0);
         setColor2("#228B22");
         setClicked2("complete-click");
-        dispatch(incrementScore(200))
-
-        
+        dispatch(incrementScore(200));
       } else {
         setAnswerMessage(`incorrect, the correct answer is ${a2}`);
         setDisplay(0);
         setColor2("#9B1003");
         setClicked2("complete-click");
-        dispatch(decrementScore(200))
-        
+        dispatch(decrementScore(200));
       }
     }
     if (clicked3 === "clicked-three") {
@@ -218,15 +215,13 @@ const JavaScriptDateMethodsAndProperties = () => {
         setDisplay(0);
         setColor3("#228B22");
         setClicked3("complete-click");
-        dispatch(incrementScore(300))
-        
+        dispatch(incrementScore(300));
       } else {
         setAnswerMessage(`incorrect, the correct answer is ${a3}`);
         setDisplay(0);
         setColor3("#9B1003");
         setClicked3("complete-click");
-        dispatch(decrementScore(300))
-        
+        dispatch(decrementScore(300));
       }
     }
     if (clicked4 === "clicked-four") {
@@ -236,15 +231,13 @@ const JavaScriptDateMethodsAndProperties = () => {
         setDisplay(0);
         setColor4("#228B22");
         setClicked4("complete-click");
-        dispatch(incrementScore(400))
-        
+        dispatch(incrementScore(400));
       } else {
         setAnswerMessage(`incorrect, the correct answer is ${a4}`);
         setDisplay(0);
         setColor4("#9B1003");
         setClicked4("complete-click");
-        dispatch(decrementScore(400))
-        
+        dispatch(decrementScore(400));
       }
     }
     if (clicked5 === "clicked-five") {
@@ -254,15 +247,13 @@ const JavaScriptDateMethodsAndProperties = () => {
         setDisplay(0);
         setColor5("#228B22");
         setClicked5("complete-click");
-        dispatch(incrementScore(500))
-        
+        dispatch(incrementScore(500));
       } else {
         setAnswerMessage(`incorrect, the correct answer is ${a5}`);
         setDisplay(0);
         setColor5("#9B1003");
         setClicked5("complete-click");
-        dispatch(decrementScore(500))
-        
+        dispatch(decrementScore(500));
       }
     }
   };
@@ -271,7 +262,9 @@ const JavaScriptDateMethodsAndProperties = () => {
     return (
       <>
         <Stack gap={2}>
-          <button id="category-title">JavaScript Date Methods And Properties</button>
+          <button id="category-title">
+            JavaScript Date Methods And Properties
+          </button>
           <button
             onClick={handleClick1}
             disabled={isDisabled1}
@@ -314,7 +307,6 @@ const JavaScriptDateMethodsAndProperties = () => {
           </button>
         </Stack>
         <div>{answerMessage}</div>
-
       </>
     );
   }

@@ -8,10 +8,7 @@ const FooterScore = () => {
 
   return (
     <Navbar className="footer-container">
-      <Container id="score-text-container">
-        Score: {score}
-        
-      </Container>
+      <Container id="score-text-container">Score: {score}</Container>
     </Navbar>
   );
 };
