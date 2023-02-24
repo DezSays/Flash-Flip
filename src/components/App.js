@@ -22,10 +22,15 @@ import SQLKeywords from "./Categories/SQLKeywords";
 import JavaScriptStringMethods from "./Categories/JavaScriptStringMethods";
 import SortingAlgorithms from "./Categories/SortingAlgorithms";
 import JavaScriptDateMethodsAndProperties from "./Categories/JavaScriptDateMethodsAndProperties";
+import Vocab from "./Categories/Vocab";
+import VanillaJavaScript from "./Categories/VanillaJavaScript.js";
+import Redux from "./Categories/Redux";
+import ReactJS from "./Categories/ReactJS";
+import HTMLBasics from "./Categories/HTMLBasics";
+import CSS from "./Categories/CSS";
 import FooterScore from "./Layout/FooterScore.js";
 
 const App = () => {
-
   const [category1, setCategory1] = useState("");
   const [category2, setCategory2] = useState("");
   const [category3, setCategory3] = useState("");
@@ -63,6 +68,12 @@ const App = () => {
   let jsm = "javascript_string_methods";
   let sa = "sorting_algorithms";
   let jdmap = "javascript_date_methods_and_properties";
+  let css = "css";
+  let hb = "html_basics";
+  let rjs = "react";
+  let rx = "redux";
+  let vjs = "vanilla_javascript";
+  let vb = "vocab";
 
   const handleSelect = (e) => {
     const olCategories = document.getElementById("ol-selected-category");
@@ -72,6 +83,36 @@ const App = () => {
     if (catArr.length < 7 && !catArr.includes(val)) {
       catArr.push(val);
 
+      if (val === css) {
+        let val = "CSS";
+        li.innerText = `${val}.   `;
+        olCategories.appendChild(li);
+      }
+      if (val === hb) {
+        let val = "HTML Basics";
+        li.innerText = `${val}.   `;
+        olCategories.appendChild(li);
+      }
+      if (val === rjs) {
+        let val = "React";
+        li.innerText = `${val}.   `;
+        olCategories.appendChild(li);
+      }
+      if (val === rx) {
+        let val = "Redux";
+        li.innerText = `${val}.   `;
+        olCategories.appendChild(li);
+      }
+      if (val === vjs) {
+        let val = "Vanilla JavaScript";
+        li.innerText = `${val}.   `;
+        olCategories.appendChild(li);
+      }
+      if (val === vb) {
+        let val = "Vocab";
+        li.innerText = `${val}.   `;
+        olCategories.appendChild(li);
+      }
       if (val === jam) {
         let val = "JavaScript Array Methods";
         li.innerText = `${val}.   `;
@@ -191,6 +232,120 @@ const App = () => {
   };
 
   const finalSelection = () => {
+    // CSS
+    if (c1 === css) {
+      c1 = <CSS />;
+    }
+    if (c2 === css) {
+      c2 = <CSS />;
+    }
+    if (c3 === css) {
+      c3 = <CSS />;
+    }
+    if (c4 === css) {
+      c4 = <CSS />;
+    }
+    if (c5 === css) {
+      c5 = <CSS />;
+    }
+    if (c6 === css) {
+      c6 = <CSS />;
+    }
+    // HTML Basics
+    if (c1 === hb) {
+      c1 = <HTMLBasics />;
+    }
+    if (c2 === hb) {
+      c2 = <HTMLBasics />;
+    }
+    if (c3 === hb) {
+      c3 = <HTMLBasics />;
+    }
+    if (c4 === hb) {
+      c4 = <HTMLBasics />;
+    }
+    if (c5 === hb) {
+      c5 = <HTMLBasics />;
+    }
+    if (c6 === hb) {
+      c6 = <HTMLBasics />;
+    }
+    // Vocab
+    if (c1 === vb) {
+      c1 = <Vocab />;
+    }
+    if (c2 === vb) {
+      c2 = <Vocab />;
+    }
+    if (c3 === vb) {
+      c3 = <Vocab />;
+    }
+    if (c4 === vb) {
+      c4 = <Vocab />;
+    }
+    if (c5 === vb) {
+      c5 = <Vocab />;
+    }
+    if (c6 === vb) {
+      c6 = <Vocab />;
+    }
+    // Vanilla JavaScript
+    if (c1 === vjs) {
+      c1 = <VanillaJavaScript />;
+    }
+    if (c2 === vjs) {
+      c2 = <VanillaJavaScript />;
+    }
+    if (c3 === vjs) {
+      c3 = <VanillaJavaScript />;
+    }
+    if (c4 === vjs) {
+      c4 = <VanillaJavaScript />;
+    }
+    if (c5 === vjs) {
+      c5 = <VanillaJavaScript />;
+    }
+    if (c6 === vjs) {
+      c6 = <VanillaJavaScript />;
+    }
+    // Redux
+    if (c1 === rx) {
+      c1 = <Redux />;
+    }
+    if (c2 === rx) {
+      c2 = <Redux />;
+    }
+    if (c3 === rx) {
+      c3 = <Redux />;
+    }
+    if (c4 === rx) {
+      c4 = <Redux />;
+    }
+    if (c5 === rx) {
+      c5 = <Redux />;
+    }
+    if (c6 === rx) {
+      c6 = <Redux />;
+    }
+    // React
+    if (c1 === rjs) {
+      c1 = <ReactJS />;
+    }
+    if (c2 === rjs) {
+      c2 = <ReactJS />;
+    }
+    if (c3 === rjs) {
+      c3 = <ReactJS />;
+    }
+    if (c4 === rjs) {
+      c4 = <ReactJS />;
+    }
+    if (c5 === rjs) {
+      c5 = <ReactJS />;
+    }
+    if (c6 === rjs) {
+      c6 = <ReactJS />;
+    }
     // Git Basics
     if (c1 === git101) {
       c1 = <GitBasics />;
@@ -561,10 +716,9 @@ const App = () => {
         <Form id="form-categories">
           <div id="custom-control custom-checkbox" key="checkbox">
             <h2 id="category-heading">Categories</h2>
+            <h2 id="category-instructions"><span id="category-instructions-span">Select 6 categories from the choices below:</span></h2>
 
             <Row>
-              <Col id="space-holder"></Col>
-
               <Col id="column1">
                 <Form.Check type="checkbox">
                   <Form.Check.Input
@@ -596,9 +750,31 @@ const App = () => {
                     isValid
                     disabled={isDisabled}
                     onClick={handleSelect}
+                    value="css"
+                  />
+                  <Form.Check.Label id="label19">CSS</Form.Check.Label>
+                </Form.Check>
+
+                <Form.Check type="checkbox">
+                  <Form.Check.Input
+                    type="checkbox"
+                    isValid
+                    disabled={isDisabled}
+                    onClick={handleSelect}
                     value="git_basics"
                   />
                   <Form.Check.Label id="label3">Git Basics</Form.Check.Label>
+                </Form.Check>
+
+                <Form.Check type="checkbox">
+                  <Form.Check.Input
+                    type="checkbox"
+                    isValid
+                    disabled={isDisabled}
+                    onClick={handleSelect}
+                    value="html_basics"
+                  />
+                  <Form.Check.Label id="label20">HTML Basics</Form.Check.Label>
                 </Form.Check>
 
                 <Form.Check type="checkbox">
@@ -613,7 +789,9 @@ const App = () => {
                     HTTP Request Methods
                   </Form.Check.Label>
                 </Form.Check>
+              </Col>
 
+              <Col id="column2">
                 <Form.Check type="checkbox">
                   <Form.Check.Input
                     type="checkbox"
@@ -640,9 +818,7 @@ const App = () => {
                     JavaScript Array Methods
                   </Form.Check.Label>
                 </Form.Check>
-              </Col>
 
-              <Col id="column2">
                 <Form.Check type="checkbox">
                   <Form.Check.Input
                     type="checkbox"
@@ -695,7 +871,9 @@ const App = () => {
                     JavaScript String Methods
                   </Form.Check.Label>
                 </Form.Check>
+              </Col>
 
+              <Col id="column3">
                 <Form.Check type="checkbox">
                   <Form.Check.Input
                     type="checkbox"
@@ -721,9 +899,7 @@ const App = () => {
                     PG Promise Query Methods
                   </Form.Check.Label>
                 </Form.Check>
-              </Col>
 
-              <Col id="column3">
                 <Form.Check type="checkbox">
                   <Form.Check.Input
                     type="checkbox"
@@ -756,11 +932,35 @@ const App = () => {
                     isValid
                     disabled={isDisabled}
                     onClick={handleSelect}
+                    value="react"
+                  />
+                  <Form.Check.Label id="label21">React</Form.Check.Label>
+                </Form.Check>
+
+                <Form.Check type="checkbox">
+                  <Form.Check.Input
+                    type="checkbox"
+                    isValid
+                    disabled={isDisabled}
+                    onClick={handleSelect}
                     value="redirection_http_status_codes"
                   />
                   <Form.Check.Label id="label15">
                     Redirection HTTP Status Codes
                   </Form.Check.Label>
+                </Form.Check>
+              </Col>
+
+              <Col id="column4">
+                <Form.Check type="checkbox">
+                  <Form.Check.Input
+                    type="checkbox"
+                    isValid
+                    disabled={isDisabled}
+                    onClick={handleSelect}
+                    value="redux"
+                  />
+                  <Form.Check.Label id="label22">Redux</Form.Check.Label>
                 </Form.Check>
 
                 <Form.Check type="checkbox">
@@ -799,9 +999,31 @@ const App = () => {
                   />
                   <Form.Check.Label id="label18">SQL Keywords</Form.Check.Label>
                 </Form.Check>
-              </Col>
 
-              <Col id="space-holder"></Col>
+                <Form.Check type="checkbox">
+                  <Form.Check.Input
+                    type="checkbox"
+                    isValid
+                    disabled={isDisabled}
+                    onClick={handleSelect}
+                    value="vanilla_javascript"
+                  />
+                  <Form.Check.Label id="label23">
+                    Vanilla JavaScript
+                  </Form.Check.Label>
+                </Form.Check>
+
+                <Form.Check type="checkbox">
+                  <Form.Check.Input
+                    type="checkbox"
+                    isValid
+                    disabled={isDisabled}
+                    onClick={handleSelect}
+                    value="vocab"
+                  />
+                  <Form.Check.Label id="label24">Vocab</Form.Check.Label>
+                </Form.Check>
+              </Col>
             </Row>
             <Row>
               <Col id="space-holder"></Col>
@@ -849,7 +1071,8 @@ const App = () => {
   } else {
     return (
       <h1>
-        Well, that's embarassing. There has been an error, but we will fix it as soon as possible. 
+        Well, that's embarassing. There has been an error, but we will fix it as
+        soon as possible.
       </h1>
     );
   }

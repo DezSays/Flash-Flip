@@ -102,7 +102,7 @@ margin:0% 1% 0%
   font-size: 70%;
 }
 
-#label1, #label2, #label3, #label4, #label5, #label6, #label7, #label8, #label9, #label10, #label11, #label12, #label13, #label14, #label15, #label16, #label17, #label18 {
+#label1, #label2, #label3, #label4, #label5, #label6, #label7, #label8, #label9, #label10, #label11, #label12, #label13, #label14, #label15, #label16, #label17, #label18, #label19, #label20, #label21, #label22, #label23, #label24 {
   color:black;
   font-size: 120%;
   margin-top: 2%;
@@ -116,16 +116,9 @@ margin:0% 1% 0%
 
 
 #column1, #column2, #column3, #column4 {
-  margin:2% 0% 1%;
+  margin:2% 1% 1% 5%;
   font-weight: bold;
 }
-
-#selected-categories-column {
-  font-weight: bold;
-
-
-}
-
 
 #game-layout{
   font-size:200%;
@@ -153,4 +146,22 @@ ol{
 #selected-categories-column{
   border-color: #ca788e;
   border-style: dashed;
+  font-weight: bold;
+  width:80vw;
+  background-color: rgb(172, 242, 96, 0.7);
+  text-align: center;
+}
+
+#category-instructions{
+  text-align: center;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-top:4%
+}
+
+#category-instructions-span{
+  border-color: #ca788e;
+  border-style: dashed;
+  background-color: rgb(172, 242, 96, 0.7);
+  padding:0% 2% 0%;
 }
