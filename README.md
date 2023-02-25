@@ -1,70 +1,137 @@
-# Getting Started with Create React App
+<h1 align="center">Flash-Flip</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## :books: A game that will test your knowledge on various coding materials :books:
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+##Live Demo
+---
+[Flash-Flip](LIVE DEMO LINK HERE)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+##Link to Video of Gameplay
+---
+<a href="#" target="_blank"><img src="#" width="240" height="180" border="10" /></a>
 
-### `npm test`
+##Contents
+--- 
+  * What It Is
+  * Tech Stack
+  * Challenges and Solutions
+  * MVP
+  * My Stretch Goals
+  * Screenshots
+  * Code Examples
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+##What It Is
+---
 
-### `npm run build`
+Flash-Flip is a game designed for students to better understand the core concepts of full-stack web development. This game includes 24 categories, and each category has five levels of difficulty. In order to begin playing, the user must select 6 categories and click the 'Start Game!' button. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Once the game has started a score will appear. The score will update throughout the game until all of the questions have been answered.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This is an independent project built using primarily React and Redux.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+##Tech Stack
+---
+  * React
+  * Redux
+  * Bootstrap
+  * CSS3
 
-### `npm run eject`
+##Challenges and Solutions
+---
+I have always favored learning complex material through playing games. There were lots of ideas for this application, but getting to the finished product was not without challenges. Below are a few of the problems I encountered and how I overcame them. 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+  * Challenge #1: Conditional Rendering   
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+challenge description here
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+  * Challenge #2: Dynamically Update Score && Style
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+challenge description here
 
-## Learn More
+  * Challenge #3: Allowing Only One Attempt
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+challenge description here
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+##MVP (Minimum Viable Product)
+---  
+The MVP included:
+  * A mobile responsive design
+  * 
+  * 
+  * 
+  * 
+  * 
+  * 
+  * 
 
-### Code Splitting
+##Stretch Goals
+---
+Here is what the second level IVP (Intermediate Viable Product) will feature:
+  * info
+  * 
+  * 
+  * 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+##Screenshots
+---
+Landing Instructions
+![alt text](image url)
 
-### Analyzing the Bundle Size
+Category Choices
+![alt text](image url)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Selected Categories
+![alt text](image url)
 
-### Making a Progressive Web App
+Begin Game
+![alt text](image url)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Question
+![alt text](image url)
 
-### Advanced Configuration
+Correct Answer
+![alt text](image url)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Correct Answer Timeout
+![alt text](image url)
 
-### Deployment
+Incorrect Answer 
+![alt text](image url)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Incorrect Answer Timeout 
+![alt text](image url)
 
-### `npm run build` fails to minify
+End Game
+![alt text](image url)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+
+
+
+##Code Examples
+---
+Code Description
+
+```javascript
+code snippet here
+  ```
+
+
+Code Description
+
+```javascript
+code snippet here
+  ```
+
+Code Description
+
+```javascript
+code snippet here
+  ```
