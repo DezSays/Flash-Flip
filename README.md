@@ -79,7 +79,7 @@ Here is what the second level IVP (Intermediate Viable Product) will feature:
 ##Screenshots
 ---
 Landing Instructions
-![alt text](/src/images/flash-flip-landing-page-screenshot.png)
+![alt text](/public/flash-flip-landing-page-screenshot.png)
 
 Category Choices
 ![alt text](image url)
