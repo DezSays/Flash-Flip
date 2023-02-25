@@ -54,7 +54,7 @@ code {
 }
 #landing-heading {
   text-align: center;
-  margin: 4% 0% 1%;
+  margin: 4% 0% 0%;
   font-size: 650%;
   font-weight: 900;
 }
@@ -165,24 +165,20 @@ ol {
 }
 
 #selected-categories-column {
-  border-color: #ca788e;
-  border-style: dashed;
   font-weight: bold;
   width: 80vw;
-  background-color: rgb(172, 242, 96, 0.7);
+  background-color: rgb(172, 242, 96, 0.5);
   text-align: center;
 }
 
 #category-instructions {
   text-align: center;
   font-weight: bold;
-  text-decoration: underline;
   margin-top: 4%;
 }
 
 #category-instructions-span {
-  border-color: #ca788e;
-  border-style: dashed;
+  
   background-color: rgb(172, 242, 96, 0.7);
   padding: 0% 2% 0%;
 }

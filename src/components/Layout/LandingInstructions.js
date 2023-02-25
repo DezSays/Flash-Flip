@@ -6,10 +6,9 @@ const LandingInstructions = () => {
       <h2 id="main-text">
         {" "}
         Welcome to Flash-Flip! Flash-Flip is an application designed for users
-        to study coding materials. To begin the game, select 6 categories from
-        the choices available on the next page. Once 6 categories have been
-        chosen, a start game button will appear. Click the start game button and
-        let the game begin!{" "}
+        to study coding material. There are 24 categories to choose from on the
+        next page. Once 6 categories have been selected, the 'start game' button
+        will appear and you will have the option to begin a new game!{" "}
       </h2>
     </div>
   );

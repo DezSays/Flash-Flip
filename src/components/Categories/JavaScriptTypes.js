@@ -169,13 +169,13 @@ const JavaScriptTypes = () => {
       if (userInput1.toLowerCase() === a1.toLowerCase()) {
         setAnswerMessage("correct answer");
         setDisplay(0);
-        setColor1("#228B22");
+        setColor1("rgb(172, 242, 96, 0.7)");
         setClicked1("complete-click");
         dispatch(incrementScore(100));
       } else {
         setAnswerMessage(`incorrect, the correct answer is ${a1}`);
         setDisplay(0);
-        setColor1("#9B1003");
+        setColor1("rgb(210, 4, 45, 0.7)");
         setClicked1("complete-click");
         dispatch(decrementScore(100));
       }
@@ -185,13 +185,13 @@ const JavaScriptTypes = () => {
       if (userInput2.toLowerCase() === a2.toLowerCase()) {
         setAnswerMessage("correct answer");
         setDisplay(0);
-        setColor2("#228B22");
+        setColor2("rgb(172, 242, 96, 0.7)");
         setClicked2("complete-click");
         dispatch(incrementScore(200));
       } else {
         setAnswerMessage(`incorrect, the correct answer is ${a2}`);
         setDisplay(0);
-        setColor2("#9B1003");
+        setColor2("rgb(210, 4, 45, 0.7)");
         setClicked2("complete-click");
         dispatch(decrementScore(200));
       }
@@ -201,13 +201,13 @@ const JavaScriptTypes = () => {
       if (userInput3.toLowerCase() === a3.toLowerCase()) {
         setAnswerMessage("correct answer");
         setDisplay(0);
-        setColor3("#228B22");
+        setColor3("rgb(172, 242, 96, 0.7)");
         setClicked3("complete-click");
         dispatch(incrementScore(300));
       } else {
         setAnswerMessage(`incorrect, the correct answer is ${a3}`);
         setDisplay(0);
-        setColor3("#9B1003");
+        setColor3("rgb(210, 4, 45, 0.7)");
         setClicked3("complete-click");
         dispatch(decrementScore(300));
       }
@@ -217,13 +217,13 @@ const JavaScriptTypes = () => {
       if (userInput4.toLowerCase() === a4.toLowerCase()) {
         setAnswerMessage("correct answer");
         setDisplay(0);
-        setColor4("#228B22");
+        setColor4("rgb(172, 242, 96, 0.7)");
         setClicked4("complete-click");
         dispatch(incrementScore(400));
       } else {
         setAnswerMessage(`incorrect, the correct answer is ${a4}`);
         setDisplay(0);
-        setColor4("#9B1003");
+        setColor4("rgb(210, 4, 45, 0.7)");
         setClicked4("complete-click");
         dispatch(decrementScore(400));
       }
@@ -233,13 +233,13 @@ const JavaScriptTypes = () => {
       if (userInput5.toLowerCase() === a5.toLowerCase()) {
         setAnswerMessage("correct answer");
         setDisplay(0);
-        setColor5("#228B22");
+        setColor5("rgb(172, 242, 96, 0.7)");
         setClicked5("complete-click");
         dispatch(incrementScore(500));
       } else {
         setAnswerMessage(`incorrect, the correct answer is ${a5}`);
         setDisplay(0);
-        setColor5("#9B1003");
+        setColor5("rgb(210, 4, 45, 0.7)");
         setClicked5("complete-click");
         dispatch(decrementScore(500));
       }

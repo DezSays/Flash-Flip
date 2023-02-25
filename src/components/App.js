@@ -699,6 +699,7 @@ const App = () => {
   if (displayState === 0) {
     return (
       <div>
+        
         <h1 id="landing-heading">Flash-Flip</h1>
         <LandingInstructions />
 
@@ -715,7 +716,9 @@ const App = () => {
       <>
         <Form id="form-categories">
           <div id="custom-control custom-checkbox" key="checkbox">
-            <h2 id="category-heading">Categories</h2>
+            <div id="main-text-div">
+              <h2 id="landing-heading">Categories</h2>
+            </div>
             <h2 id="category-instructions">
               <span id="category-instructions-span">
                 Select 6 categories from the choices below:
