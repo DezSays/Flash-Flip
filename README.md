@@ -8,11 +8,11 @@
 ---
 
 <a alt="Flash-Flip" href="https://main.dtj4kwusbjafh.amplifyapp.com/">
-<img alt="flash-flip live site" src="/public/Live-Site-IMG.png" width="500" height="280" />
+<img alt="flash-flip live site" src="/public/Live-Site-IMG.png" width="400" height="240" />
 </a>
 
 <a alt="Flash-Flip-API" href="https://dezsays.github.io/API/data.json">
-<img alt="flash-flip-api" src="/public/API-IMG.png" width="500" height="280" />
+<img alt="flash-flip-api" src="/public/API-IMG.png" width="400" height="240" />
 </a>
 
 ##Video of Gameplay
