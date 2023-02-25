@@ -2,31 +2,34 @@
 
 ## :books: A game that will test your knowledge on various coding materials :books:
 
-
-
 ---
 
-##Live Demo
+##Live Sites
 ---
-[Flash-Flip](LIVE DEMO LINK HERE)
 
-##Link to Video of Gameplay
+<a alt="Flash-Flip" href="https://main.dtj4kwusbjafh.amplifyapp.com/">
+Live Site
+</a>
+
+<a alt="Flash-Flip-API" href="https://dezsays.github.io/API/data.json">
+API
+</a>
+
+##Video of Gameplay
 ---
-<a href="#" target="_blank"><img src="/public/flash-flip-landing-page-screenshot.png"  /></a>
+
+[silent-visual-walk-through.webm](https://user-images.githubusercontent.com/99201856/221380298-15639557-7d3a-4250-b6c0-13c262d218c2.webm)
 
 ##Contents
 --- 
   * What It Is
   * Tech Stack
-  * Challenges and Solutions
   * MVP
-  * My Stretch Goals
+  * Stretch Goals
   * Screenshots
-  * Code Examples
 
 ##What It Is
 ---
-
 Flash-Flip is a game designed for students to better understand the core concepts of full-stack web development. This game includes 24 categories, and each category has five levels of difficulty. In order to begin playing, the user must select 6 categories and click the 'Start Game!' button. 
 
 Once the game has started a score will appear. The score will update throughout the game until all of the questions have been answered.
@@ -40,41 +43,26 @@ This is an independent project built using primarily React and Redux.
   * Bootstrap
   * CSS3
 
-##Challenges and Solutions
----
-I have always favored learning complex material through playing games. There were lots of ideas for this application, but getting to the finished product was not without challenges. Below are a few of the problems I encountered and how I overcame them. 
-
-  * Challenge #1: Conditional Rendering   
-
-challenge description here
-
-  * Challenge #2: Dynamically Update Score && Style
-
-challenge description here
-
-  * Challenge #3: Allowing Only One Attempt
-
-challenge description here
-
 ##MVP (Minimum Viable Product)
 ---  
 The MVP included:
+  * Allowing the user to select from a variety of coding categories
+  * Each category has 5 levels of difficulty
+  * Questions are randomized according to their level and category
+  * Use redux to ensure a score is kept
+  * Conditional rendering of the landing page, categories, and game play
+  * When the answer is incorrect, display the correct answer
+  * Allowing only one attempt per question
   * A mobile responsive design
-  * 
-  * 
-  * 
-  * 
-  * 
-  * 
-  * 
 
 ##Stretch Goals
 ---
 Here is what the second level IVP (Intermediate Viable Product) will feature:
-  * info
-  * 
-  * 
-  * 
+  * Set up server
+  * Create categories
+  * Multi-Player option
+  * Global scoreboard
+  * Customizable profiles
 
 ##Screenshots
 ---
@@ -109,29 +97,3 @@ End Game
 ![End Game](/public/flash-flip-final-page-screenshot.png)
 
 
-
-
-
-
-
-
-##Code Examples
----
-Code Description
-
-```javascript
-code snippet here
-  ```
-
-
-Code Description
-
-```javascript
-code snippet here
-  ```
-
-Code Description
-
-```javascript
-code snippet here
-  ```
