@@ -12,7 +12,7 @@
 
 ##Link to Video of Gameplay
 ---
-<a href="#" target="_blank"><img src="#" width="240" height="180" border="10" /></a>
+<a href="#" target="_blank"><img src="/public/flash-flip-landing-page-screenshot.png" width="240" height="180" border="10" /></a>
 
 ##Contents
 --- 
