@@ -78,34 +78,35 @@ Here is what the second level IVP (Intermediate Viable Product) will feature:
 
 ##Screenshots
 ---
-Landing Instructions ![Landing Instructions](/public/flash-flip-landing-page-screenshot.png)
+Landing Page 
+![Landing Page](/public/flash-flip-landing-page-screenshot.png)
 
 Category Choices
-![alt text](image url)
+![Category Choices](/public/flash-flip-category-init-page-screenshot.png)
 
 Selected Categories
-![alt text](image url)
+![Selected Categories](/public/flash-flip-category-selected-page-screenshot.png)
 
 Begin Game
-![alt text](image url)
+![Begin Game](/public/flash-flip-game-init-page-screenshot.png)
 
 Question
-![alt text](image url)
+![Question](/public/flash-flip-question-init-screenshot.png)
 
 Correct Answer
-![alt text](image url)
+![Correct Answer](/public/flash-flip-question-correct-screenshot.png)
 
 Correct Answer Timeout
-![alt text](image url)
+![Correct Answer Timeout](/public/flash-flip-question-correct-timeout-screenshot.png)
 
 Incorrect Answer 
-![alt text](image url)
+![Incorrect Answer](/public/flash-flip-question-incorrect-screenshot.png)
 
 Incorrect Answer Timeout 
-![alt text](image url)
+![Incorrect Answer Timeout](/public/flash-flip-question-incorrect-timeout-screenshot.png)
 
 End Game
-![alt text](image url)
+![End Game](/public/flash-flip-final-page-screenshot.png)
 
 
 
