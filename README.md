@@ -90,19 +90,19 @@ Selected Categories
 Begin Game
 ![Begin Game](/public/flash-flip-game-init-page-screenshot.png)
 
-Question
+Question Modal
 ![Question](/public/flash-flip-question-init-screenshot.png)
 
 Correct Answer
 ![Correct Answer](/public/flash-flip-question-correct-screenshot.png)
 
-Correct Answer Timeout
+Correct Notification Removed After 15 Second Timeout
 ![Correct Answer Timeout](/public/flash-flip-question-correct-timeout-screenshot.png)
 
 Incorrect Answer 
 ![Incorrect Answer](/public/flash-flip-question-incorrect-screenshot.png)
 
-Incorrect Answer Timeout 
+Incorrect Answer Notification Removed After 15 Second Timeout 
 ![Incorrect Answer Timeout](/public/flash-flip-question-incorrect-timeout-screenshot.png)
 
 End Game

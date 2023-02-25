@@ -251,7 +251,7 @@ const JavaScriptMathMethods = () => {
     setAnswerMessage("");
   };
 
-  setTimeout(resetInitialAnswerMessage, 8000);
+  setTimeout(resetInitialAnswerMessage, 15000);
 
   if (display === 0) {
     return (

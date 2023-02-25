@@ -128,7 +128,7 @@ const RedirectionHTTPStatusCodes = () => {
     setAnswerMessage("");
   };
 
-  setTimeout(resetInitialAnswerMessage, 8000);
+  setTimeout(resetInitialAnswerMessage, 15000);
 
   const handleClick1 = (e) => {
     setDisplay(1);
