@@ -96,13 +96,13 @@ Question Modal
 Correct Answer
 ![Correct Answer](/public/flash-flip-question-correct-screenshot.png)
 
-Correct Notification Removed After 15 Second Timeout
+Correct Notification Removed After Timeout
 ![Correct Answer Timeout](/public/flash-flip-question-correct-timeout-screenshot.png)
 
 Incorrect Answer 
 ![Incorrect Answer](/public/flash-flip-question-incorrect-screenshot.png)
 
-Incorrect Answer Notification Removed After 15 Second Timeout 
+Incorrect Answer Notification Removed After Timeout 
 ![Incorrect Answer Timeout](/public/flash-flip-question-incorrect-timeout-screenshot.png)
 
 End Game
