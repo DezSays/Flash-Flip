@@ -67,33 +67,33 @@ Here is what the second level IVP (Intermediate Viable Product) will feature:
 ##Screenshots
 ---
 Landing Page 
-![Landing Page](/public/flash-flip-landing-page-screenshot.png)
+![Landing Page](./public/flash-flip-landing-page-screenshot.png)
 
 Category Choices
-![Category Choices](/public/flash-flip-category-init-page-screenshot.png)
+![Category Choices](./public/flash-flip-category-init-page-screenshot.png)
 
 Selected Categories
-![Selected Categories](/public/flash-flip-category-selected-page-screenshot.png)
+![Selected Categories](./public/flash-flip-category-selected-page-screenshot.png)
 
 Begin Game
-![Begin Game](/public/flash-flip-game-init-page-screenshot.png)
+![Begin Game](./public/flash-flip-game-init-page-screenshot.png)
 
 Question Modal
-![Question](/public/flash-flip-question-init-screenshot.png)
+![Question](./public/flash-flip-question-init-screenshot.png)
 
 Correct Answer
-![Correct Answer](/public/flash-flip-question-correct-screenshot.png)
+![Correct Answer](./public/flash-flip-question-correct-screenshot.png)
 
 Correct Notification Removed After Timeout
-![Correct Answer Timeout](/public/flash-flip-question-correct-timeout-screenshot.png)
+![Correct Answer Timeout](./public/flash-flip-question-correct-timeout-screenshot.png)
 
 Incorrect Answer 
-![Incorrect Answer](/public/flash-flip-question-incorrect-screenshot.png)
+![Incorrect Answer](./public/flash-flip-question-incorrect-screenshot.png)
 
 Incorrect Answer Notification Removed After Timeout 
-![Incorrect Answer Timeout](/public/flash-flip-question-incorrect-timeout-screenshot.png)
+![Incorrect Answer Timeout](./public/flash-flip-question-incorrect-timeout-screenshot.png)
 
 End Game
-![End Game](/public/flash-flip-final-page-screenshot.png)
+![End Game](./public/flash-flip-final-page-screenshot.png)
 
 
