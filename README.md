@@ -1,18 +1,18 @@
 <h1 align="center">Flash-Flip</h1>
 
-## :books: A game that will test your knowledge on various coding materials :books:
+<h2 align="center"> :books: A game that will test your knowledge on various coding materials :books: </h2>
 
 ---
 
-##Live Sites
+##Live Sites 
 ---
 
 <a alt="Flash-Flip" href="https://main.dtj4kwusbjafh.amplifyapp.com/">
-Live Site
+<img alt="flash-flip live site" src="/public/Live-Site-IMG.png" width="400" height="240" />
 </a>
 
 <a alt="Flash-Flip-API" href="https://dezsays.github.io/API/data.json">
-API
+<img alt="flash-flip-api" src="/public/API-IMG.png" width="400" height="240" />
 </a>
 
 ##Video of Gameplay
