@@ -7,7 +7,7 @@
 ##Live Sites 
 ---
 
-<a alt="Flash-Flip" href="https://main.dtj4kwusbjafh.amplifyapp.com/">
+<a alt="Flash-Flip" href="https://flash-flip.vercel.app/">
 <img alt="flash-flip live site" src="/public/Live-Site-IMG.png" width="400" height="240" />
 </a>
 
